@@ -1,134 +1,35 @@
-## 布丁工坊部署
+<p align="center">
+ <img width="100px" src="https://avatars.githubusercontent.com/u/18262199" align="center" alt="Logo" />
+ <h2 align="center">布丁工坊</h2>
+ <p align="center">一个充满甜品味的计算机知识笔记仓库</p>
+</p>
+<p align="center">
+  <a href="https://www.nousbuild.org/">
+  	<img alt="https://www.nousbuild.org/" src="https://img.shields.io/badge/图筑风暻-ED8384?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFF2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuN2JhZmNmMCwgMjAyMS8xMC8xMy0wMDo0MToyOCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMi0wMS0wMVQyMTo0MDoxOSswODowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjItMDEtMDFUMjE6NDA6NTErMDg6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjItMDEtMDFUMjE6NDA6NTErMDg6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDk1Nzk0N2UtMzhjZS00YTRhLTkzZTItYWNhZTQzY2ZhZmU4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ5NTc5NDdlLTM4Y2UtNGE0YS05M2UyLWFjYWU0M2NmYWZlOCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjQ5NTc5NDdlLTM4Y2UtNGE0YS05M2UyLWFjYWU0M2NmYWZlOCI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NDk1Nzk0N2UtMzhjZS00YTRhLTkzZTItYWNhZTQzY2ZhZmU4IiBzdEV2dDp3aGVuPSIyMDIyLTAxLTAxVDIxOjQwOjE5KzA4OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNSAoV2luZG93cykiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+PUE0fAAAALRJREFUOI3tkz0KAjEQRh+roCC2gldQ2N47WIjWXkI9hIVewMIbeAiPsEew3NpmWYTPIokGNTGg5T4I88vHzECQhKSDDCdJuc2lvExSVxIZhra1c6AAVqTRA0bAQ+iVPbBMEJoACwA34lHvlHb02GqFpLO/2icGwDRS3wE5cImt5hh7fgsYAjPMHdc2f4PnkUN0PH8DbEON3yYKif4kFKURaoT+gfsilbVXr9YHai+uAz0VwB1CgYRUa2LvsQAAAABJRU5ErkJggg==&logoColor=white">
+  </a>
+  <a href="https://pudding.nousbuild.com/">
+  	<img alt="https://pudding.nousbuild.com/" src="https://img.shields.io/badge/布丁工坊-FFCC81?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB0PSIxNjQ4OTczMTE1NzAyIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQwMTgiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTgxNi4yIDcyOS41aC02NS4zYzMxLjcgMCA1NS4zLTI5IDQ5LTYwLjFsLTg3LjMtNDI1Yy00LjgtMjMuMi0yNS4yLTM5LjktNDktMzkuOUgzNjEuMWMtMjMuNyAwLTQ0LjIgMTYuNy00OSAzOS45bC04Ny41IDQyNWMtNi40IDMxIDE3LjMgNjAuMSA0OSA2MC4xaC02NS44Yy0yMy45IDAtMzguMiAyNi41LTI1LjEgNDYuNWwxOS43IDMwYzUuNSA4LjUgMTUgMTMuNiAyNS4xIDEzLjZoNTY4LjdjMTAgMCAxOS40LTUgMjUtMTMuNGwyMC0zMGMxMy4zLTIwLTEtNDYuNy0yNS00Ni43ek0zNTUuMyAyNDkuNGM4LjMgMCAxNSA2LjcgMTUgMTVzLTYuNyAxNS0xNSAxNS0xNS02LjctMTUtMTUgNi43LTE1IDE1LTE1ek0yNTguMSA2OTJjLTIuMi0yLjctNS44LTguNi00LjEtMTYuN2w1Mi4yLTI1My40YzQ5LjYgNTMuNCAxMTUuNS0zLjcgMTIzLjYtNTAuOSA4LjgtNTEuNyA4Mi00Ni43IDEwMC44LTIyLjcgNS41IDcgOC4xIDE2LjIgMTEuMiAyNS44LTYuNyAyLjUtMTAuOCA5LjQtOS41IDE2LjdsNDYuOSAyNjUuOWMxLjQgOC4yIDkuMiAxMy42IDE3LjQgMTIuMiA4LjItMS40IDEzLjYtOS4yIDEyLjItMTcuNGwtNDIuNC0yNDAuM2M3LjcgNC45IDE4LjEgOC43IDMyLjMgMTAuNWwzNC40IDE5NWMxLjQgOC4yIDkuMiAxMy42IDE3LjQgMTIuMiA4LjItMS40IDEzLjYtOS4yIDEyLjItMTcuNGwtMzMuNC0xODguOGMxMS0wLjggMjAuNy0zIDI5LjMtNi4yTDY4Ni45IDU3N2MxLjQgOC4yIDkuMiAxMy42IDE3LjQgMTIuMiA4LjItMS40IDEzLjYtOS4yIDEyLjItMTcuNEw2ODYuMyA0MDBjOS42LTguNSAxNi43LTE4LjQgMjEuOS0yOC40bDYyLjQgMzAzLjljMS43IDguMS0xLjggMTMuOS00LjEgMTYuN3MtNy4yIDcuNC0xNS41IDcuNEgyNzMuNmMtOC4yLTAuMS0xMy4yLTQuNy0xNS41LTcuNnogbTU1OC4xIDY3LjVsLTIwIDMwSDIyNy41bC0xOS43LTMwaDYwOC40eiIgZmlsbD0iIzNDMTQxMCIgcC1pZD0iNDAxOSIgZGF0YS1zcG0tYW5jaG9yLWlkPSJhMzEzeC43NzgxMDY5LjAuaTE1IiBjbGFzcz0ic2VsZWN0ZWQiPjwvcGF0aD48L3N2Zz4=&logoColor=white">
+  </a>
+  <a href="https://github.com/pudding0503/friends">
+  	<img alt="Github" src="https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white">
+  </a>
+  <a href="https://www.nousbuild.org/support/">
+      <img src="https://img.shields.io/badge/Link-Page-4184F4?style=flat">
+  </a>
+  <a href="https://github.com/pudding0503/friends/issues">
+  	<img alt="Issues" src="https://img.shields.io/github/issues/pudding0503/friends?color=F48D73">
+  </a>
+</p>
 
-### 1. 生成部署密钥
 
-一路按回车直到生成成功：
 
-```ssh
-ssh-keygen -f github-deploy-key
-```
+<p align="center">
+  <a href="https://github.com/pudding0503">
+    <img src="https://ghchart.rshah.org/pudding0503" alt="Github chart" />
+  </a>
+</p>
+<h2 align="center">构建中</h2>
 
-当前目录下会有 `github-deploy-key` 和 `github-deploy-key.pub` 两个文件。
-
-### 2. 配置部署密钥
-
-#### 2.1 添加 key
-
-复制 `github-deploy-key` 文件内容，在 `blog` 仓库 `Settings -> Secrets -> Add a new secret` 页面上添加：
-
-1. 在 `Name` 输入框填写 `HEXO_DEPLOY_PRI`。
-2. 在 `Value` 输入框填写 `github-deploy-key` 文件内容。
-
-#### 2.2 添加 key pub
-
-复制 `github-deploy-key.pub` 文件内容，在 `pudding.github.io` 仓库 `Settings -> Deploy keys -> Add deploy key` 页面上添加：
-
-1. 在 `Title` 输入框填写 `HEXO_DEPLOY_PUB`。
-2. 在 `Key` 输入框填写 `github-deploy-key.pub` 文件内容。
-3. 勾选 `Allow write access` 选项。
-
-### 3. 编写 Github Actions
-
-在 `blog` 仓库根目录下创建 `.github/workflows/deploy.yml` 文件，目录结构如下：
-
-```yaml
-name: Pudding Blog Build
-
-# https://chee5e.space/hexo-deploy-github-actions/
-# https://sanonz.github.io/2020/deploy-a-hexo-blog-from-github-actions/
-
-on:
-  push:
-    branches:
-      - main
-
-env:
-  GIT_USER: Haoning Wu
-  GIT_EMAIL: whn@nousbuild.com
-  THEME_REPO: pudding0503/hexo-theme-fluid
-  THEME_BRANCH: master
-  DEPLOY_REPO: pudding0503/pudding0503.github.io
-  DEPLOY_BRANCH: main
-
-jobs:
-  build:
-    name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node_version: [14.x]
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Checkout theme repo
-        uses: actions/checkout@v2
-        with:
-          repository: ${{ env.THEME_REPO }}
-          ref: ${{ env.THEME_BRANCH }}
-          path: themes/fluid
-
-      - name: Checkout deploy repo
-        uses: actions/checkout@v2
-        with:
-          repository: ${{ env.DEPLOY_REPO }}
-          ref: ${{ env.DEPLOY_BRANCH }}
-          path: .deploy_git
-
-      - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node_version }}
-
-      - name: Configuration environment
-        env:
-          HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
-        run: |
-          sudo timedatectl set-timezone "Asia/Shanghai"
-          mkdir -p ~/.ssh/
-          echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.name $GIT_USER
-          git config --global user.email $GIT_EMAIL
-          cp _config.fluid.yml themes/fluid/_config.yml
-
-      - name: Install dependencies
-        run: |
-          npm install
-
-      - name: Deploy hexo
-        run: |
-          npm run deploy
-```
-
-### 4. 其他工作
-
-#### 4.1 添加 hexo-deployer-git 依赖
-
-在 `package.json` 中添加如下依赖，才可正常部署：
-
-```json
-{
-  "dependencies": {
-    "hexo-deployer-git": "^3.0.0"
-  }
-}
-```
-
-#### 4.2 修改为 git 方式
-
-在 `_config.yml` 中修改为 git 方式：
-
-```yaml
-deploy:
-  type: git
-  repo: git@github.com:pudding0503/pudding0503.github.io.git
-  branch: main
-```
-
-#### 4.3 主题配置
-
-复制一份 `_config.yml` 到根目录，重命名为 `_config.fluid.yml`。
+<div align="center">
+本知识库正在构建中
+</div>

@@ -203,18 +203,24 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/hello/" target="_self">
+          <img src="/img/bg/banner.jpg" srcset="/img/loading.gif" lazyload alt="你好，测试文章">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/hello-world/" target="_self">
-          Hello World
+        <a href="/hello/" target="_self">
+          你好，测试文章
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/hello-world/" target="_self">
+        <a href="/hello/" target="_self">
           
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
+          这是一篇测试文章标签是：说明 内置了一些图片：  下面来一个代码块： 123456update code_posts set post_content&#x3D;replace(post_content,&amp;#x27;https:&#x2F;&#x2F;cos.nousbuild.org&amp;#x27;,&amp;#x27;https:&#x2F;&#x2F;cos.nousbuild.com&amp;#x27;)update fact_posts set post_
         </a>
       </p>
 
@@ -222,12 +228,19 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2022-04-04 10:47" pubdate>
-              2022-04-04
+            <time datetime="2022-04-05 13:35" pubdate>
+              2022-04-05
             </time>
           </div>
         
         
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%AF%B4%E6%98%8E/">说明</a>
+            
+          </div>
         
       </div>
     </article>
@@ -279,11 +292,38 @@
 
   <footer class="text-center mt-5 py-3">
   <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <p>Copyright © <a target="_blank" rel="noopener" href="https://www.nousbuild.org">Scenery Architecture</a> All rights reserved</p> 
   </div>
   
 
   
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        陕ICP备14012493号
+      </a>
+    </span>
+    
+      
+        <span>
+          <a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12345678"
+            rel="nofollow noopener"
+            class="beian-police"
+            target="_blank"
+          >
+            
+              <span style="visibility: hidden; width: 0">|</span>
+              <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+            
+            <span>陕公网安备61010302000322号</span>
+          </a>
+        </span>
+      
+    
+  </div>
+
 
   
 </footer>

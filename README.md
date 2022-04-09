@@ -1,7 +1,7 @@
 <p align="center">
  <img width="100px" src="https://avatars.githubusercontent.com/u/18262199" align="center" alt="Logo" />
- <h2 align="center">布丁工坊</h2>
- <p align="center">一个充满甜品味的计算机知识笔记仓库</p>
+ <h2 align="center">布丁笔记簿</h2>
+ <p align="center">一个充满甜品味的计算机知识学习笔记仓库</p>
 </p>
 <p align="center">
   <a href="https://www.nousbuild.org/">
@@ -28,8 +28,34 @@
     <img src="https://ghchart.rshah.org/pudding0503" alt="Github chart" />
   </a>
 </p>
-<h2 align="center">构建中</h2>
 
-<div align="center">
-本知识库正在构建中
-</div>
+
+
+### 1. 什么是布丁笔记簿？
+
+布丁笔记簿，顾名思义就是布丁的学习笔记！这个笔记本主要是用来整理、记录和总结一些计算机的专业课以及计算机相关的一些知识笔记。
+
+### 2. 布丁是谁？
+
+嗨，大家好，我是原创人物 “布丁” 的作者。我业余时间喜欢用 iPad 画一些二次元的插画，布丁这个人物就是我慢慢摸索中确定并画出来的（二次元人物实在是太多了，想要画一个有一定识别度的，而且还不能跟已有的人物重样，的确有一定难度...）。
+
+我呢，最终给他取名 “布丁”（英文名 Pudding），所以人物的主体颜色也都是来源于布丁。人物性格嘛，设置乖巧一点、可爱一点、温柔一点吧。Emm，至于人物的生日、血型等等，以后再说吧~
+
+你可以在下面关注我的画作：
+
++ [Github](https://github.com/pudding0503/pudding-illustration)
++ [Pixiv](https://www.pixiv.net/users/69771423)
++ [Behance](https://www.behance.net/haoning)
++ [我的插画](https://www.nousbuild.org/illustration/)
+
+### 3. 其他链接
+
+下面是我的一些其他站点链接：
+
++ [图筑风暻](https://www.nousbuild.org)
++ [比特饼干](https://bitcookies.nousbuild.com)
++ [小喵心语](https://cattalk.nousbuild.org)
+
+### 4. 友情链接
+
+正在开发中

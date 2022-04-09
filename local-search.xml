@@ -4,48 +4,23 @@
   
   
   <entry>
-    <title>置顶文章</title>
-    <link href="/top/"/>
-    <url>/top/</url>
+    <title>计算机网络 第一章：概述</title>
+    <link href="/computer-network-1/"/>
+    <url>/computer-network-1/</url>
     
-    <content type="html"><![CDATA[<h3 id="这是说明文章"><a href="#这是说明文章" class="headerlink" title="这是说明文章"></a>这是说明文章</h3><p>这里是个笔记网站，主站在这里 <a href="https://www.nousbuild.org/">图筑风暻</a></p><hr><h3 id="这是一个-LaTeX-数学公式测试"><a href="#这是一个-LaTeX-数学公式测试" class="headerlink" title="这是一个 LaTeX 数学公式测试"></a>这是一个 LaTeX 数学公式测试</h3><p>$$<br>E&#x3D;mc^2<br>$$</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="计算机网络-第一章：概述"><a href="#计算机网络-第一章：概述" class="headerlink" title="计算机网络 第一章：概述"></a>计算机网络 第一章：概述</h2>]]></content>
     
     
     <categories>
       
-      <category>其他</category>
+      <category>计算机网络</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>测试</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>测试文章</title>
-    <link href="/hello/"/>
-    <url>/hello/</url>
-    
-    <content type="html"><![CDATA[<h3 id="这是一篇测试文章"><a href="#这是一篇测试文章" class="headerlink" title="这是一篇测试文章"></a>这是一篇测试文章</h3><p>标签是：<code>测试</code></p><p>内置了一些图片：</p><p><img src="/../img/post/hello.jpg"></p><p>下面来一个代码块：</p><figure class="highlight yaml"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">tag:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">banner_img:</span> <span class="hljs-string">/img/default.png</span><br>  <span class="hljs-attr">banner_img_height:</span> <span class="hljs-number">80</span><br>  <span class="hljs-attr">banner_mask_alpha:</span> <span class="hljs-number">0.3</span><br>  <span class="hljs-attr">subtitle:</span><br>  <span class="hljs-attr">tagcloud:</span><br>    <span class="hljs-attr">min_font:</span> <span class="hljs-number">15</span><br>    <span class="hljs-attr">max_font:</span> <span class="hljs-number">30</span><br>    <span class="hljs-attr">unit:</span> <span class="hljs-string">px</span><br>    <span class="hljs-attr">start_color:</span> <span class="hljs-string">&quot;#BBBBEE&quot;</span><br>    <span class="hljs-attr">end_color:</span> <span class="hljs-string">&quot;#337ab7&quot;</span><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>其他</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>测试</tag>
+      <tag>课本</tag>
       
     </tags>
     

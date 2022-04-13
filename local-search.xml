@@ -4,11 +4,36 @@
   
   
   <entry>
+    <title>计算机网络 第二章：物理层</title>
+    <link href="/computer-network-2/"/>
+    <url>/computer-network-2/</url>
+    
+    <content type="html"><![CDATA[<h2 id="计算机网络-第二章：物理层"><a href="#计算机网络-第二章：物理层" class="headerlink" title="计算机网络 第二章：物理层"></a>计算机网络 第二章：物理层</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机网络</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>课本</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>计算机网络 第一章：概述</title>
     <link href="/computer-network-1/"/>
     <url>/computer-network-1/</url>
     
-    <content type="html"><![CDATA[<h2 id="计算机网络-第一章：概述"><a href="#计算机网络-第一章：概述" class="headerlink" title="计算机网络 第一章：概述"></a>计算机网络 第一章：概述</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="计算机网络-第一章：概述"><a href="#计算机网络-第一章：概述" class="headerlink" title="计算机网络 第一章：概述"></a>计算机网络 第一章：概述</h2><h3 id="1-计算机网络在信息时代中的作用"><a href="#1-计算机网络在信息时代中的作用" class="headerlink" title="1.计算机网络在信息时代中的作用"></a>1.计算机网络在信息时代中的作用</h3><p>21世纪的重要特征：数字化、网络化、信息化、以网络为核心的信息时代。</p><p>互联网有两个重要基本特点：连通性、资源共享</p><ul><li><p>连通性：用户终端都彼此直接联通一样；</p></li><li><p>资源共享：信息、软件和硬件共享；</p></li></ul><p>互联网+代表一种新的经济形态，有正面，也有负面影响，但负面影响毕竟还是次要的。</p><h3 id="2-互联网概述"><a href="#2-互联网概述" class="headerlink" title="2. 互联网概述"></a>2. 互联网概述</h3><h4 id="2-1-网络的网络"><a href="#2-1-网络的网络" class="headerlink" title="2.1 网络的网络"></a>2.1 网络的网络</h4><p>计算机网络（简称网络）由若干结点（node）和链接这些节点的链路（link）组成。网络中的结点可以是计算机、集线器、路由器等。</p>]]></content>
     
     
     <categories>

@@ -16,23 +16,23 @@
   <meta name="author" content="Haoning Wu">
   <meta name="keywords" content="BLOG,博客,笔记,计算机,网络,算法,数据,开发,C,C++,Python,Windows">
   
-    <meta name="description" content="讨论物理层的基本概念，介绍有关数据通信的重要概念，以及各种传输媒体的主要特点。">
+    <meta name="description" content="随看计算机网络的发展，网络中的安全问题也日趋严重，大量在网络中存储和传输的数据就需要保护。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="计算机网络 第二章：物理层">
-<meta property="og:url" content="https://pudding.nousbuild.com/computer-network-2/">
+<meta property="og:title" content="计算机网络 第七章：网络安全">
+<meta property="og:url" content="https://pudding.nousbuild.com/computer-network-7/">
 <meta property="og:site_name" content="布丁笔记簿">
-<meta property="og:description" content="讨论物理层的基本概念，介绍有关数据通信的重要概念，以及各种传输媒体的主要特点。">
+<meta property="og:description" content="随看计算机网络的发展，网络中的安全问题也日趋严重，大量在网络中存储和传输的数据就需要保护。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pudding.nousbuild.com/img/post/computer-network/2-index.jpg">
-<meta property="article:published_time" content="2022-04-10T13:28:00.000Z">
+<meta property="og:image" content="https://pudding.nousbuild.com/img/post/computer-network/7-index.jpg">
+<meta property="article:published_time" content="2022-07-01T13:38:00.000Z">
 <meta property="article:modified_time" content="2022-07-01T13:57:05.573Z">
 <meta property="article:author" content="Haoning Wu">
 <meta property="article:tag" content="课本">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pudding.nousbuild.com/img/post/computer-network/2-index.jpg">
+<meta name="twitter:image" content="https://pudding.nousbuild.com/img/post/computer-network/7-index.jpg">
   
   
-  <title>计算机网络 第二章：物理层 - 布丁笔记簿</title>
+  <title>计算机网络 第七章：网络安全 - 布丁笔记簿</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="计算机网络 第二章：物理层"></span>
+            <span id="subtitle" data-typed-text="计算机网络 第七章：网络安全"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-04-10 21:28" pubdate>
-          2022年4月10日 晚上
+        <time datetime="2022-07-01 21:38" pubdate>
+          2022年7月1日 晚上
         </time>
       </span>
     
@@ -225,7 +225,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          3k 字
+          5k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
           <!-- compatible with older versions-->
-          26 分钟
+          42 分钟
         
       </span>
     
@@ -275,100 +275,147 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">计算机网络 第二章：物理层</h1>
+            <h1 style="display: none">计算机网络 第七章：网络安全</h1>
             
             <div class="markdown-body">
               
-              <h1 id="1-物理层的基本概念"><a href="#1-物理层的基本概念" class="headerlink" title="1.物理层的基本概念"></a>1.物理层的基本概念</h1><p>物理层协议称为物理层规程，实际上是物理层协议。</p>
+              <h1 id="1-网络安全问题概述"><a href="#1-网络安全问题概述" class="headerlink" title="1.网络安全问题概述"></a>1.网络安全问题概述</h1><h2 id="1-1-计算机网络面临的安全性威胁"><a href="#1-1-计算机网络面临的安全性威胁" class="headerlink" title="1.1 计算机网络面临的安全性威胁"></a>1.1 计算机网络面临的安全性威胁</h2><p><strong>计算机网络的通信面临两大类威胁：</strong></p>
 <ol>
-<li><strong>机械特性：</strong>接线器形状和尺寸、引脚数目和排列、固定和锁定装置等；</li>
-<li><strong>电气特性：</strong>接口电缆的各条线上的电压范围；</li>
-<li><strong>功能特性：</strong>某条线上的某一电平的电压的意义；</li>
-<li><strong>过程特性：</strong>对于不同功能的各种可能事件的出现顺序；</li>
+<li><strong>被动攻击：</strong>指攻击者从网络上窃听他人的通信内容。通常把这类攻击称为截获。</li>
+<li><strong>主动攻击：</strong><ol>
+<li><strong>篡改：</strong>攻击者故意篡改、中断网络上传送的报文。</li>
+<li><strong>恶意程序：</strong>计算机病毒、蠕虫、特洛伊木马、逻辑炸弹、后门入侵、流氓软件等。</li>
 </ol>
-<h1 id="2-数据通信的基础知识"><a href="#2-数据通信的基础知识" class="headerlink" title="2.数据通信的基础知识"></a>2.数据通信的基础知识</h1><h2 id="2-1-数据通信系统模型"><a href="#2-1-数据通信系统模型" class="headerlink" title="2.1 数据通信系统模型"></a>2.1 数据通信系统模型</h2><p><strong>一个数据通信系统可划分为三大部分：</strong></p>
+</li>
+<li><strong>拒绝服务 DoS（Denial of Service）：</strong>若从互联网上的成百上千个网站集中攻击一个网站，则称为分布式拒绝服务 DDOS。</li>
+</ol>
+<p><img src="/../img/post/computer-network/7-1.jpg" srcset="/img/loading.gif" lazyload></p>
+<h2 id="1-2-安全的计算机网络"><a href="#1-2-安全的计算机网络" class="headerlink" title="1.2 安全的计算机网络"></a>1.2 安全的计算机网络</h2><p><strong>一个安全的计算机网络应设法达到以下四个目标：</strong></p>
 <ol>
-<li><strong>源系统</strong>（或发送端、发送方)</li>
-<li><strong>传输系统</strong>（或传输网络）</li>
-<li><strong>目的系统</strong>（或接收端、接收方)</li>
+<li><strong>保密性：</strong>只有信息的发送方和接收方才能懂得所发送信息的内容。</li>
+<li><strong>端点鉴别：</strong>必须能够鉴别信息的发送方和接收方的真实身份。</li>
+<li><strong>信息的完整性：</strong>必须确认所收到的信息都是完整的。</li>
+<li><strong>运行的安全性：</strong>计算机网络运行的安全性。</li>
 </ol>
-<p><img src="/../img/post/computer-network/2-1.jpg" srcset="/img/loading.gif" lazyload></p>
-<p><strong>源系统一般包括以下两个部分：</strong></p>
-<ul>
-<li><strong>源点（source）：</strong>源点设备产生要传输的数据，例如，从计算机的键盘输入汉字，计算机产生输出的数字比特流。源点又称为源站，或信源。</li>
-<li><strong>发送器：</strong>通常源点生成的数字比特流要通过发送器编码后才能够在传输系统中进行传输。典型的发送器就是调制器。</li>
-</ul>
-<p><strong>目的系统一般也包括以下两个部分：</strong></p>
-<ul>
-<li><strong>接收器：</strong>接收传输系统传送过来的信号，并把它转换为能够被目的设备处理的信息。典型的接收器就是解调器，它把来自传输线路上的模拟信号进行解调，提取出在发送端置入的消息，还原出发送端产生的数字比特流。</li>
-<li><strong>终点（destination）：</strong>终点设备从接收器获取传送来的数字比特流，然后把信息输出（例如，把汉字在计算机屏幕上显示出来)。终点又称为目的站，或信宿。</li>
-</ul>
-<h2 id="2-2-有关信道的几个基本概念"><a href="#2-2-有关信道的几个基本概念" class="headerlink" title="2.2 有关信道的几个基本概念"></a>2.2 有关信道的几个基本概念</h2><p><strong>从通信的双方信息交互的方式来看，有以下三种基本方式：</strong></p>
-<ul>
-<li>单项通信（单工通信）</li>
-<li>双向交替通信（半双工通信）</li>
-<li>双向同时通信（全双工通信）</li>
-</ul>
-<h3 id="2-2-1-常用编码方式"><a href="#2-2-1-常用编码方式" class="headerlink" title="2.2.1 常用编码方式"></a>2.2.1 常用编码方式</h3><p><img src="/../img/post/computer-network/2-2.jpg" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li><strong>不归零制：</strong>正电平代表1，负电平代表0。</li>
-<li><strong>归零制：</strong>正脉冲代表1，负脉冲代表0。</li>
-<li><strong>曼彻斯特编码：</strong>位周期中心的向上跳变代表0，位周期中心的向下跳变代表1。但也可反过来定义。</li>
-<li><strong>差分曼彻斯特编码：</strong>在每一位的中心处始终都有跳变。位开始边界有跳变代表0，而位开始边界没有跳变代表1。</li>
-</ul>
-<h3 id="2-2-2-常用编码方式"><a href="#2-2-2-常用编码方式" class="headerlink" title="2.2.2 常用编码方式"></a>2.2.2 常用编码方式</h3><p><img src="/../img/post/computer-network/2-3.jpg" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>调幅（AM）即载波的振幅随基带数字信号而变化。</li>
-<li>调频（FM）即载波的频率随基带数字信号而变化。</li>
-<li>调相（PM）即载波的初始相位随基带数字信号而变化。</li>
-</ul>
-<h3 id="2-2-3-信道的极限容量"><a href="#2-2-3-信道的极限容量" class="headerlink" title="2.2.3 信道的极限容量"></a>2.2.3 信道的极限容量</h3><p>在1948年，信息论的创始人香农（Shannon）推导出了著名的香农公式。香农公式指出：信道的极限信息传输速率是</p>
-<p>$$<br>信噪比&#x3D;\dfrac{S}{N}&#x3D;\dfrac{信号平均功率}{噪声平均功率}<br>$$</p>
-<p>$$<br>C &#x3D; W×log_2(1+S&#x2F;N)（bit&#x2F;s）<br>$$</p>
-<p>香农公式表明，信道的带宽或信道中的信噪比越大，信息的极限传输速率就越高。意义在于：<strong>只要信息传输速率低于信道的极限信息传输速率，就一定存在某种办法来实现无差错的传输。</strong></p>
-<h1 id="3-物理层下面的传输媒体"><a href="#3-物理层下面的传输媒体" class="headerlink" title="3.物理层下面的传输媒体"></a>3.物理层下面的传输媒体</h1><p>传输媒体也称为传输介质或传输媒介，它就是数据传输系统中在发送器和接收器之间的物理通路。</p>
-<p>可分为两大类：</p>
-<ul>
-<li><strong>引型传输媒体：</strong>电磁波被引导沿着固体媒体传播</li>
-<li><strong>非导引型传输媒体：</strong>指自由空间</li>
-</ul>
-<h2 id="3-1-引型传输媒体"><a href="#3-1-引型传输媒体" class="headerlink" title="3.1 引型传输媒体"></a>3.1 <strong>引型传输媒体</strong></h2><h3 id="3-1-1-双绞线"><a href="#3-1-1-双绞线" class="headerlink" title="3.1.1 双绞线"></a>3.1.1 双绞线</h3><p>双绞线也称为双扭线，是最古老但又是最常用的传输媒体。把两根互相绝缘的铜导线并排放在一起，然后用规则的方法绞合起来就构成了双绞线。绞合可减少对相邻导线的电磁干扰。使用双绞线最多的地方就是到处都有的电话系统。</p>
-<p><img src="/../img/post/computer-network/2-4.jpg" srcset="/img/loading.gif" lazyload></p>
-<h3 id="3-1-2-同轴电缆"><a href="#3-1-2-同轴电缆" class="headerlink" title="3.1.2 同轴电缆"></a>3.1.2 <strong>同轴电缆</strong></h3><p>同轴电缆由内导体铜质芯线（单股实心线或多股绞合线)、绝缘层、网状编织的外导体屏蔽层（也可以是单股的）以及保护塑料外层所组成。</p>
-<p>由于外导体屏蔽层的作用，同轴电缆具有很好的抗干扰特性，被广泛用于传输较高速率的数据。</p>
-<p><img src="/../img/post/computer-network/2-5.jpg" srcset="/img/loading.gif" lazyload></p>
-<h3 id="3-1-3-光缆（光纤）"><a href="#3-1-3-光缆（光纤）" class="headerlink" title="3.1.3 光缆（光纤）"></a>3.1.3 <strong>光缆（光纤）</strong></h3><p>光纤通信就是利用光导纤维（以下简称为光纤）传递光脉冲来进行通信。有光脉冲相当于1，而没有光脉冲相当于0。由于可见光的频率非常高，约为 10^8 MHz 的量级，因此一个光纤通信系统的传输带宽远远大于目前其他各种传输媒体的带宽。</p>
-<p><img src="/../img/post/computer-network/2-6.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>光纤不仅具有通信容量非常大的优点，而且还具有其他的一些特点：</p>
+<h2 id="1-3-数据加密模型"><a href="#1-3-数据加密模型" class="headerlink" title="1.3 数据加密模型"></a>1.3 数据加密模型</h2><p>一般的数据加密模型，用户 A 向 B 发送明文 X，但通过加密算法 E 运算后，就得出密文 Y。</p>
+<p><img src="/../img/post/computer-network/7-2.jpg" srcset="/img/loading.gif" lazyload></p>
+<h1 id="2-两类密码体制"><a href="#2-两类密码体制" class="headerlink" title="2.两类密码体制"></a>2.两类密码体制</h1><h2 id="2-1-对称密钥密码体制"><a href="#2-1-对称密钥密码体制" class="headerlink" title="2.1 对称密钥密码体制"></a>2.1 对称密钥密码体制</h2><p><strong>加密密钥与解密密钥是使用相同的密码体制</strong>。数据加密标准 DES 属于对称密钥密码体制。它由 IBM 公司研制出，于 1977 年被美国定为联邦信息标准后，在国际上引起了极大的重视。ISO 曾将 DES 作为数据加密标准。</p>
+<p><strong>DES 的保密性仅取决于对密钥的保密，而算法是公开的</strong>。DES 的问题是它的密钥长度。56 位长的密钥意味着共有 $2^{56}$ 种可能的密钥。（1999 年被破解）</p>
+<h2 id="2-2-公钥密码体制（非对称密钥）"><a href="#2-2-公钥密码体制（非对称密钥）" class="headerlink" title="2.2 公钥密码体制（非对称密钥）"></a>2.2 公钥密码体制（非对称密钥）</h2><p>公钥密码体制（又称为公开密钥密码体制）的概念是由斯坦福大学的研究人员 Diffie 与 Hellman 于 1976 年提出的。<strong>公钥密码体制使用不同的加密密钥与解密密钥</strong>。</p>
+<p>公钥密码体制的产生主要有两个方面的原因，一是由于对称密钥密码体制的<strong>密钥分配</strong>问题，二是由于对<strong>数字签名</strong>的需求。</p>
+<p>公钥密码体制提出不久，人们就找到了三种公钥密码体制。目前最著名的是由美国三位科学家 Rivest, Shamir 和 Adleman 于 1976 年提出并在 1978 年正式发表的 RSA 体制，它是一种基于数论中的大数分解问题的体制。</p>
+<p>在公钥密码体制中，<strong>加密密钥 PK（public key，即公钥）</strong>是向公众公开的，而<strong>解密密钥SK（secret key，即私钥或秘钥）</strong>则是需要<strong>保密</strong>的。<strong>加密算法 E</strong> 和<strong>解密算法 D</strong> 也都是公开的。</p>
+<p><strong>公钥密码体制的加密和解密过程有如下特点：</strong></p>
+<p>（1）密钥对产生器产生出接收者 B 的一对密钥：加密密钥 $PK_B$ 和解密密钥 $SK_B$ 。发送者 A 所用的加密密钥 $PK_B$ 就是接收者 B 的公钥，它向公众公开。而 B 所用的解密密钥  $SK_B$  就是接收者 B 的私钥，对其他人都保密。</p>
+<p>（2）发送者 A 用 B 的公钥 $PK_B$ 通过 E 运算对明文 X 加密，得出密文 Y，发送给 B。</p>
+<p>$$<br>Y&#x3D;E_{PK_B}(X)<br>$$</p>
+<p>B 用自己的私钥  $SK_B$  通过 D 运算进行解密，恢复出明文，即</p>
+<p>$$<br>D_{SK_B}(Y)&#x3D;D_{SK_B}(E_{PK_B}(X))&#x3D;X<br>$$</p>
+<p>（3）虽然在计算机上可以容易地产生成对的$PK_B$ 和 $SK_B$ ，但从已知的 $PK_B$ 实际上不可能。</p>
+<p>（4）虽然公钥可用来加密，但却不能用来解密，即</p>
+<p>$$<br>D_{PK_B}(E_{PK_B}(X)) \ne X<br>$$</p>
+<p>（5）先后对 X 进行 D 运算和 E 运算或进行 E 运算和 D 运算，结果都是一样的：</p>
+<p>$$<br>E_{PK_B}(D_{SK_B}(X))&#x3D;D_{SK_B}(E_{PK_B}(X))&#x3D;X<br>$$</p>
+<p><img src="/../img/post/computer-network/7-3.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>请注意，<strong>任何加密方法的安全性取决于密钥的长度，以及攻破密文所需的计算量</strong>，而不是简单地取决于加密的体制（公钥密码体制或传统加密体制）。</p>
+<h1 id="3-数字签名"><a href="#3-数字签名" class="headerlink" title="3.数字签名"></a>3.数字签名</h1><p>书信或文件是根据亲笔签名或印章来证明其真实性的。但在计算机网络中传送的文电又如何盖章呢？这就要使用<strong>数字签名</strong>。数字签名必须保证能够实现以下三点功能：</p>
 <ol>
-<li>传输损耗小，中继距离长，对远距离传输特别经济。</li>
-<li>抗雷电和电磁干扰性能好。这在有大电流脉冲干扰的环境下尤为重要。</li>
-<li>无串音干扰，保密性好，也不易被窃听或截取数据。</li>
-<li>体积小，重量轻。这在现有电缆管道已拥塞不堪的情况下特别有利。</li>
+<li>接收者能够核实发送者对报文的签名。这叫做<strong>报文鉴别</strong>。</li>
+<li>接收者确信所收到的数据和发送者发送的完全一样而没有被篡改过。这叫做<strong>报文的完整性</strong>。</li>
+<li>发送者事后不能抵赖对报文的签名。这叫做<strong>不可否认</strong>。</li>
 </ol>
-<h2 id="3-2-非引型传输媒体"><a href="#3-2-非引型传输媒体" class="headerlink" title="3.2 非引型传输媒体"></a>3.2 <strong>非引型传输媒体</strong></h2><h3 id="3-2-1-短波通信（高频通信）"><a href="#3-2-1-短波通信（高频通信）" class="headerlink" title="3.2.1 短波通信（高频通信）"></a>3.2.1 <strong>短波通信（高频通信）</strong></h3><p>短波通信（即高频通信）主要是靠电离层的反射。但电离层的不稳定所产生的衰落现象和电离层反射所产生的多径效应，使得短波信道的通信质量较差，一般都是低速传输。</p>
-<h3 id="3-2-2-无线电微波通信"><a href="#3-2-2-无线电微波通信" class="headerlink" title="3.2.2 无线电微波通信"></a>3.2.2 <strong>无线电微波通信</strong></h3><p>无线电微波通信在数据通信中占有重要地位。微波的频率范围为 300 MHz<del>300 GHz (波长 1m</del>1mm)，但主要使用2~40 GHz的频率范围。</p>
-<p>微波在空间主要是直线传播。由于微波会穿透电离层而进入宇宙空间，因此它不像短波那样可以经电离层反射传播到地面上很远的地方。</p>
-<p>传统的微波通信主要有两种方式，即<strong>地面微波接力通信</strong>和<strong>卫星通信</strong>。</p>
-<h1 id="4-信道复用技术"><a href="#4-信道复用技术" class="headerlink" title="4.信道复用技术"></a>4.信道复用技术</h1><h2 id="4-1-常用的信道复用技术"><a href="#4-1-常用的信道复用技术" class="headerlink" title="4.1 常用的信道复用技术"></a>4.1 常用的信道复用技术</h2><h3 id="4-1-1-频分复用-FDM"><a href="#4-1-1-频分复用-FDM" class="headerlink" title="4.1.1 频分复用 FDM"></a>4.1.1 <strong>频分复用 FDM</strong></h3><p><img src="/../img/post/computer-network/2-7.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>按频率分，通信过程中自始至终都占用这个频带，同时占用不同带宽资源。</p>
-<h3 id="4-1-2-时分复用-TDM"><a href="#4-1-2-时分复用-TDM" class="headerlink" title="4.1.2 时分复用 TDM"></a>4.1.2 <strong>时分复用 TDM</strong></h3><p><img src="/../img/post/computer-network/2-8.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>所有用户在不同时间占用同样的频率宽度。</p>
-<h3 id="4-1-3-统计时分复用"><a href="#4-1-3-统计时分复用" class="headerlink" title="4.1.3 统计时分复用"></a>4.1.<strong>3 统计时分复用</strong></h3><p>统计时分复用是一种改进的时分复用，它能明显地提高信道的利用率。集中器常使用这种统计时分复用。</p>
-<p><img src="/../img/post/computer-network/2-9.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>当一个帧的数据放满了，就发送出去。因此，STDM 帧不是固定分配时隙，而是按需动念地分配时隙。</p>
-<h3 id="4-1-4-波分复用"><a href="#4-1-4-波分复用" class="headerlink" title="4.1.4 波分复用"></a>4.1.4 <strong>波分复用</strong></h3><p>光的频分复用。</p>
-<h3 id="4-1-5-码分复用"><a href="#4-1-5-码分复用" class="headerlink" title="4.1.5 码分复用"></a>4.1.5 <strong>码分复用</strong></h3><p>码分复用 CDM 是另一种共享信道的方法。实际上，人们更常用的名词是码分多址 CDMA（Code Division Multiple Access）。</p>
-<p>每一个用户可以在同样的时间使用同样的频带进行通信。由于各用户使用经过特殊挑选的不同码型，因此各用户之间不会造成干扰。</p>
-<p><img src="/../img/post/computer-network/2-10.jpg" srcset="/img/loading.gif" lazyload></p>
-<h1 id="5-数字传输系统"><a href="#5-数字传输系统" class="headerlink" title="5.数字传输系统"></a>5.数字传输系统</h1><p>为了解决<strong>速率标准不统一</strong>和<strong>不是同步传输</strong>的问题，美国在 1988 年首先推出了一个数字传输标准叫做同步光纤网 SONET（Synchronous Optical Network）。</p>
-<p>SDH&#x2F;SONET 标准的制定，使北美、日本和欧洲这三个地区三种不同的数字传输体制在 STM-1 等级上获得了统一。这是第一次真正实现了数字传输体制上的世界性标准。现在 SDH&#x2F;SONET 标准已成为公认的新一代理想的传输网体制，因而对世界电信网络的发展具有重大的意义。SDH标准也适合于微波和卫星传输的技术体制。</p>
-<h1 id="6-宽带接入技术"><a href="#6-宽带接入技术" class="headerlink" title="6.宽带接入技术"></a>6.宽带接入技术</h1><h2 id="6-1-ADSL技术"><a href="#6-1-ADSL技术" class="headerlink" title="6.1 ADSL技术"></a>6.1 <strong>ADSL技术</strong></h2><p>非对称数字用户线技术是用数字技术对现有的模拟电话用户线进行改造，使它能够承载宽带数字业务。0~4kHZ 低端频谱给传统电话，原先未利用的高端频谱给用户上网。非对称指下行远远大于上行带宽。ADSL 传输距离取决于数据率和用户线的线径（线径约小衰减越大）。</p>
-<h2 id="6-2-光纤同轴混合网"><a href="#6-2-光纤同轴混合网" class="headerlink" title="6.2 光纤同轴混合网"></a>6.2 <strong>光纤同轴混合网</strong></h2><p>光纤同轴混合网是在有线电视网的基础上开发的一种居民宽带接入网，除可传送电视节目外，还能提供电诂、数据和其他宽带交互型业务。</p>
-<h2 id="6-3-FTTx技术"><a href="#6-3-FTTx技术" class="headerlink" title="6.3 FTTx技术"></a>6.3 <strong>FTTx技术</strong></h2><p>光纤到户 FTTH 是最好的选择，把光纤一直铺设到用户家庭。只有光纤在进入家门后，才把光信号转为电信号，以获得最高的上网速率。</p>
-<p>为了有效地利用光纤资源，在光纤干线和广大用户之间，还需要铺设一段中间的转换装置即光配线网 ODN（Optical Distribution Network），使得数十个家庭用户能够共享一根光纤干线。</p>
-<p><img src="/../img/post/computer-network/2-11.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>光线路终端 OLT（Optical Line Terminal）是连接到光纤干线的终端设备。OLT 把收到的下行数据发往无源的 1:N 光分路器，然后用广播方式向所有用户端的光网络单元ONU（Optical Network Unit）发送。典型的光分路器使用分路比是 1:32。</p>
+<p><img src="/../img/post/computer-network/7-4.jpg" srcset="/img/loading.gif" lazyload></p>
+<h1 id="4-鉴别"><a href="#4-鉴别" class="headerlink" title="4.鉴别"></a>4.<strong>鉴别</strong></h1><h2 id="4-1-报文鉴别"><a href="#4-1-报文鉴别" class="headerlink" title="4.1 报文鉴别"></a>4.1 报文鉴别</h2><h3 id="4-1-1-密码散列函数"><a href="#4-1-1-密码散列函数" class="headerlink" title="4.1.1 密码散列函数"></a>4.1.1 密码散列函数</h3><p>D 运算和 E 运算都需要花费非常多的计算机的 CPU 时间。因此，我们需要找出一种相对简单的方法对报文进行鉴别。这种方法就是使用<strong>密码散列函数（cryptographic hash function）</strong>。</p>
+<p><strong>散列函数具有以下两个特点：</strong></p>
+<ol>
+<li>散列函数的输入长度可以很长，但其输出长度则是固定的，并且较短。散列函数的输出叫做散列值。</li>
+<li>不同的散列值肯定对应于不同的输入，但不同的输入却可能得出相同的散列值。这就是说，散列函数的输入和输出并非一一对应的，而是多对一的。</li>
+</ol>
+<p><img src="/../img/post/computer-network/7-5.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>在密码学中使用的散列函数称为密码散列函数，其最重要的特点就是：<strong>要找到两个不同的报文，它们具有同样的密码散列函数输出，在计算上是不可行的。</strong></p>
+<h3 id="4-1-1-实用的密码散列函数-MD5-和-SHA-1"><a href="#4-1-1-实用的密码散列函数-MD5-和-SHA-1" class="headerlink" title="4.1.1 实用的密码散列函数 MD5 和 SHA-1"></a>4.1.1 实用的密码散列函数 MD5 和 SHA-1</h3><p>通过许多学者的不断努力，已经设计出一些实用的密码散列函数（或称为散列算法），其中最出名的就是 MD5 和 SHA-1。MD 就是 Message Digest 的缩写，意思是报文摘要。</p>
+<p><strong>MD5算法的大致过程如下：</strong></p>
+<ol>
+<li>先把任意长的报文按模 $2^{64}$ 计算其余数（64位），追加在报文的后面。</li>
+<li>在报文和余数之间填充 1~512 位，使得填充后的总长度是 512 的整数倍。填充的首位是 1，后面都是 0。</li>
+<li>把追加和填充后的报文分割为一个个 512 位的数据块，每个 512 位的报文数据再分成 4 个 128 位的数据块依次送到不同的散列函数进行 4 轮计算。每一轮又都按 32 位的小数据块进行复杂的运算。一直到最后计算出 MD5 报文摘要代码（128位）。</li>
+</ol>
+<h3 id="4-1-3-报文鉴别码"><a href="#4-1-3-报文鉴别码" class="headerlink" title="4.1.3 报文鉴别码"></a>4.1.3 报文鉴别码</h3><p>下面进一步讨论在报文鉴别中怎样使用散列函数。下面给出的三个简单步骤：</p>
+<ol>
+<li>用户 A 首先根据自己的明文 X 计算出散列 H(X)（例如，使用 MD5）。为方便起见，我们把得出的散列 H(X) 记为 H。</li>
+<li>用户 A 把散列 H 拼接在明文 X 的后面，生成了扩展的报文 (X, H)，然后发送给 B。</li>
+<li>用户 B 收到了这个扩展的报文 (X, H)。因为散列的长度 H 是早已知道的固定值，因此可以把收到的散列 H 和明文 X 分离开。B 通过散列函数的运算，计算出收到的明文 X 的散列 H(X)。若 H(X)&#x3D;H，则 B 似乎可以相信所收到的明文是 A 发送过来的。</li>
+</ol>
+<p><img src="/../img/post/computer-network/7-6.jpg" srcset="/img/loading.gif" lazyload></p>
+<h2 id="4-2-实体鉴别"><a href="#4-2-实体鉴别" class="headerlink" title="4.2 实体鉴别"></a>4.2 实体鉴别</h2><p>实体鉴别和报文鉴别不同。<strong>报文鉴别是对每一个收到的报文都要鉴别报文的发送者</strong>，而<strong>实体鉴别是在系统接入的全部持续时间内对和自己通信的对方实体只需验证一次</strong>。</p>
+<p>但是，实体鉴别有漏洞叫“重放攻击”。C 截断 A 的信息，伪装成 C 发送给 B，让 B 误认为 C 就是 A。</p>
+<h1 id="5-密钥分配"><a href="#5-密钥分配" class="headerlink" title="5.密钥分配"></a>5.密钥分配</h1><h2 id="5-1-对称密钥的分配"><a href="#5-1-对称密钥的分配" class="headerlink" title="5.1 对称密钥的分配"></a>5.1 对称密钥的分配</h2><p>目前常用的密钥分配方式是设立<strong>密钥分配中心 KDC（Key Distribution Center）</strong>。KDC 是大家都信任的机构，其任务就是给需要进行秘密通信的用户临时分配一个会话密钥（仅使用一次）。</p>
+<h2 id="5-2-公钥的分配（非对称密钥）"><a href="#5-2-公钥的分配（非对称密钥）" class="headerlink" title="5.2 公钥的分配（非对称密钥）"></a>5.2 公钥的分配（非对称密钥）</h2><p>公钥的分配通过认证中心 <strong>CA（Certification Authority）</strong>，它一般由政府出资建立。每个实体都有 CA 发来的证书，里面有公钥及其拥有者的标识信息（人名或 IP 地址）。此证书被 CA 进行了数字签名。</p>
+<h1 id="6-互联网使用的安全协议"><a href="#6-互联网使用的安全协议" class="headerlink" title="6.互联网使用的安全协议"></a>6.互联网使用的安全协议</h1><h2 id="6-1-网络层安全协议"><a href="#6-1-网络层安全协议" class="headerlink" title="6.1 网络层安全协议"></a>6.1 网络层安全协议</h2><h3 id="6-1-1-IPsec-协议族概述"><a href="#6-1-1-IPsec-协议族概述" class="headerlink" title="6.1.1 IPsec 协议族概述"></a>6.1.1 IPsec 协议族概述</h3><p>IPsec 并不是一个单一协议，而是能够在 IP 层提供互联网通信安全的协议族（不太严格的名词“IPsec协议”也常见到）。IPsec 并没有限定用户必须使用何种特定的加密和鉴别算法。实际上，IPsec 是个框架，它允许通信双方选择合适的算法和参数（例如，密钥长度）。为保证互操作性，IPsec 还包含了一套加密算法，所有 IPsec 的实现都必须使用。</p>
+<p><strong>IPsec 协议族中的协议可划分为以下三个部分：</strong></p>
+<ol>
+<li><strong>IP 安全数据报格式的两个协议：</strong>鉴别首部 AH（Authentication Header）协议和封装安全有效载荷 ESP（Encapsulation Security Payload）协议。</li>
+<li>有关加密算法的<strong>三个协议</strong>。</li>
+<li><strong>互联网密钥交换 IKE（Internet Key Exchange）协议</strong>。</li>
+</ol>
+<p><strong>IP 安全数据报有以下两种不同的工作方式：</strong></p>
+<ol>
+<li><strong>运输方式（transport mode）：</strong>运输方式是在整个运输层报文段的前后分别添加若干控制信息，再加上 IP 首部，构成 IP 安全数据报。</li>
+<li><strong>隧道方式（tunnel mode）：</strong>隧道方式是在原始的IP数据报的前后分别添加若干控制信息，再加上新的 IP 首部，构成一个 IP 安全数据报。</li>
+</ol>
+<p>无论使用哪种方式，最后得出的 IP 安全数据报的 IP 首部都是<strong>不加密的</strong>。只有使用不加密的 IP 首部，互联网中的各个路由器才能识别 IP 首部中的有关信息，把 IP 安全数据报在不安全的互联网中进行转发，从源点安全地转发到终点。</p>
+<h3 id="6-1-2-安全关联-SA"><a href="#6-1-2-安全关联-SA" class="headerlink" title="6.1.2 安全关联 SA"></a>6.1.2 安全关联 SA</h3><p>在发送 IP 安全数据报之前，在源实体和目的实体之间必须创建一条网络层的<strong>逻辑连接</strong>，即<strong>安全关联 SA（Security Association）</strong>。这样，传统的互联网中无连接的网络层就变为了具有逻辑连接的一个层。安全关联是从源点到终点的单向连接，它能够提供安全服务。</p>
+<p><img src="/../img/post/computer-network/7-7.jpg" srcset="/img/loading.gif" lazyload></p>
+<h3 id="6-1-3-IP-安全数据报的格式"><a href="#6-1-3-IP-安全数据报的格式" class="headerlink" title="6.1.3 IP 安全数据报的格式"></a>6.1.3 IP 安全数据报的格式</h3><p><img src="/../img/post/computer-network/7-8.jpg" srcset="/img/loading.gif" lazyload></p>
+<h3 id="6-1-4-IPsec-的其他构件"><a href="#6-1-4-IPsec-的其他构件" class="headerlink" title="6.1.4 IPsec 的其他构件"></a>6.1.4 IPsec 的其他构件</h3><ul>
+<li><strong>安全关联数据库 SAD：</strong>SA 存放的地方。</li>
+<li><strong>安全策略数据库 SPD：</strong>指明什么样的数据报需要进行 IPsec 处理科。</li>
+</ul>
+<h2 id="6-2-运输层安全协议"><a href="#6-2-运输层安全协议" class="headerlink" title="6.2 运输层安全协议"></a>6.2 运输层安全协议</h2><p><strong>广泛使用的有两个协议：</strong></p>
+<ul>
+<li><strong>安全套接字层 SSL（Secure Socket Layer）</strong></li>
+<li><strong>运输层安全 TLS（Transport Layer Security）</strong></li>
+</ul>
+<p>SSL 在 TLS 协议的基础上，SSL 增强了 TCP，更安全了。</p>
+<p><strong>SSL 提供的安全服务可归纳为以下三种：</strong></p>
+<ol>
+<li>SSL 服务器鉴别，允许用户证实服务器的身份。</li>
+<li>SSL 客户鉴别，SSL的可选安全服务，允许服务器证实客户的身份。</li>
+<li>加密的 SSL 会话，对客户和服务器间发送的所有报文进行加密，并检测报文是否被篡改。</li>
+</ol>
+<p><strong>SSL 的工作过程：</strong></p>
+<ol>
+<li><strong>协商加密算法。</strong>浏览器 A 向服务器 B 发送浏览器的 SSL 版本号和一些可选的加密算法。B 从中选定自己所支持的算法（如RSA），并告知 A。</li>
+<li><strong>服务器鉴别。</strong>服务器 B 向浏览器 A 发送包含其 RSA 公钥的数字证书。A 使用该证书的认证机构 CA 公开发布的 RSA 公钥对该证书进行验证。</li>
+<li><strong>会话密钥计算。</strong>由浏览器 A 随机产生一个秘密数。用服务器 B 的 RSA 公钥进行加密后发送给 B。双方根据协商的算法产生共享的对称会话密钥。</li>
+<li><strong>安全数据传输。</strong>双方用会话密钥加密和解密它们之间传送的数据并验证其完整性。</li>
+</ol>
+<p><img src="/../img/post/computer-network/7-9.jpg" srcset="/img/loading.gif" lazyload></p>
+<h2 id="6-3-应用层安全协议（电子邮件的安全协议）"><a href="#6-3-应用层安全协议（电子邮件的安全协议）" class="headerlink" title="6.3 应用层安全协议（电子邮件的安全协议）"></a>6.3 应用层安全协议（电子邮件的安全协议）</h2><p>PGP（Pretty Good Privacy）是 Zimmermann 于 1995 年开发的。它是一个完整的电子邮件安全软件包，包括加密、鉴别、电子签名和压缩等技术。</p>
+<p><img src="/../img/post/computer-network/7-10.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/../img/post/computer-network/7-11.jpg" srcset="/img/loading.gif" lazyload></p>
+<h1 id="7-防火墙与入侵检测"><a href="#7-防火墙与入侵检测" class="headerlink" title="7.防火墙与入侵检测"></a>7.防火墙与入侵检测</h1><h2 id="7-1-防火墙"><a href="#7-1-防火墙" class="headerlink" title="7.1 防火墙"></a>7.1 防火墙</h2><ul>
+<li><p>一种访问控制技术，严格控制进出网络边界的分组，禁止任何不必要的通信，从而减少潜在的入侵风险。<strong>（第一道防线）</strong></p>
+<p><img src="/../img/post/computer-network/7-12.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>入侵检测系统 IDS，对进入网络分组的深度分析与检测，发现可疑入侵行为。<strong>（第二道防线）</strong></p>
+</li>
+</ul>
+<p><strong>防火墙技术一般分为以下两类：</strong></p>
+<ol>
+<li><strong>分组过滤路由器：</strong>是一种具有分组过滤功能的路由器，它根据过滤规则对进出内部网络的分组执行转发或者丢弃（即过滤）。过滤规则是基于分组的网络层或运输层首部的信息。</li>
+<li><strong>应用网关（代理服务器）：</strong>所有讲出网络的应用程序报文都必须通过应用网关。</li>
+</ol>
+<h2 id="7-2-入侵检测系统"><a href="#7-2-入侵检测系统" class="headerlink" title="7.2 入侵检测系统"></a>7.2 入侵检测系统</h2><p>入侵检测方法一般可以分为<strong>基于特征的入侵检测</strong>和<strong>基于异常的入侵检测</strong>两种。</p>
+<ul>
+<li><strong>基于特征的 IDS：</strong>维护一个所有已知攻击标志性特征的数据库。每个特征是一个与某种入侵活动相关联的规则集。当发现有与某种攻击特征匹配的分组或分组序列时，则认为可能检测到某种入侵行为。</li>
+<li><strong>基于异常的 IDS：</strong>通过观察正常运行的网络流量，学习正常流量的统计特性和规律，当检测到网络中流量的某种统计规律不符合正常情况时，则认为可能发生了入侵行为。</li>
+</ul>
+<h1 id="8-一些未来的发展方向"><a href="#8-一些未来的发展方向" class="headerlink" title="8.一些未来的发展方向"></a>8.一些未来的发展方向</h1><ol>
+<li>椭圆曲线密码（Elliptic Curve Cryptography，简写为ECC）与 AES 这一系统现在已广泛用于电子护照中，也是下一代金融系统使用的加密系统。</li>
+<li>移动安全（Mobile Security）移动通信带来的广泛应用（如移动支付，Mobile Payment）向网络安全提出了更高的要求。</li>
+<li>量子密码（Quantum Cryptography）量子计算机的到来将使得目前许多使用中的密码技术无效，后量子密码学（Post-Quantum Cryptography）的研究方兴未艾。</li>
+</ol>
 
               
             </div>
@@ -413,8 +460,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>计算机网络 第二章：物理层</div>
-      <div>https://pudding.nousbuild.com/computer-network-2/</div>
+      <div>计算机网络 第七章：网络安全</div>
+      <div>https://pudding.nousbuild.com/computer-network-7/</div>
     </div>
     <div class="license-meta">
       
@@ -426,7 +473,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年4月10日</div>
+          <div>2022年7月1日</div>
         </div>
       
       
@@ -473,18 +520,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/computer-network-3/" title="计算机网络 第三章：数据链路层">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">计算机网络 第三章：数据链路层</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/computer-network-1/" title="计算机网络 第一章：概述">
-                        <span class="hidden-mobile">计算机网络 第一章：概述</span>
+                      <a href="/computer-network-6/" title="计算机网络 第六章：应用层">
+                        <span class="hidden-mobile">计算机网络 第六章：应用层</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -505,7 +546,7 @@
         var options = Object.assign(
           {"clientID":"3d7d322afed4a293d6ac","clientSecret":"13a2463fec33044c22ddc5678f8a29086b20eb19","repo":"pudding0503.github.io","owner":"pudding0503","admin":["pudding0503"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'd5188948e0de8b17e4e879512a9768e5'
+            id: '627abd546298e38d1347730c8cea7299'
           }
         )
         var gitalk = new Gitalk(options);

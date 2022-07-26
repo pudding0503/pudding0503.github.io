@@ -16,23 +16,23 @@
   <meta name="author" content="Haoning Wu">
   <meta name="keywords" content="BLOG,博客,笔记,计算机,网络,算法,数据,开发,C,C++,Python,Windows">
   
-    <meta name="description" content="讨论物理层的基本概念，介绍有关数据通信的重要概念，以及各种传输媒体的主要特点。">
+    <meta name="description" content="Git 常用命令和常见问题解决">
 <meta property="og:type" content="article">
-<meta property="og:title" content="计算机网络 第二章：物理层">
-<meta property="og:url" content="https://pudding.nousbuild.com/computer-network-2/">
+<meta property="og:title" content="Git 命令">
+<meta property="og:url" content="https://pudding.nousbuild.com/git/">
 <meta property="og:site_name" content="布丁笔记簿">
-<meta property="og:description" content="讨论物理层的基本概念，介绍有关数据通信的重要概念，以及各种传输媒体的主要特点。">
+<meta property="og:description" content="Git 常用命令和常见问题解决">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pudding.nousbuild.com/img/post/computer-network/2-index.jpg">
-<meta property="article:published_time" content="2022-04-10T13:28:00.000Z">
+<meta property="og:image" content="https://pudding.nousbuild.com/img/post/git/git-index.jpg">
+<meta property="article:published_time" content="2022-07-26T09:45:00.000Z">
 <meta property="article:modified_time" content="2022-07-26T09:53:12.998Z">
 <meta property="article:author" content="Haoning Wu">
-<meta property="article:tag" content="课本">
+<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pudding.nousbuild.com/img/post/computer-network/2-index.jpg">
+<meta name="twitter:image" content="https://pudding.nousbuild.com/img/post/git/git-index.jpg">
   
   
-  <title>计算机网络 第二章：物理层 - 布丁笔记簿</title>
+  <title>Git 命令 - 布丁笔记簿</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -195,13 +195,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/post/computer-network/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/post/git/banner.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="计算机网络 第二章：物理层"></span>
+            <span id="subtitle" data-typed-text="Git 命令"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-04-10 21:28" pubdate>
-          2022年4月10日 晚上
+        <time datetime="2022-07-26 17:45" pubdate>
+          2022年7月26日 下午
         </time>
       </span>
     
@@ -225,7 +225,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          3k 字
+          1.5k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
           <!-- compatible with older versions-->
-          26 分钟
+          13 分钟
         
       </span>
     
@@ -275,100 +275,32 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">计算机网络 第二章：物理层</h1>
+            <h1 style="display: none">Git 命令</h1>
             
             <div class="markdown-body">
               
-              <h1 id="1-物理层的基本概念"><a href="#1-物理层的基本概念" class="headerlink" title="1.物理层的基本概念"></a>1.物理层的基本概念</h1><p>物理层协议称为物理层规程，实际上是物理层协议。</p>
-<ol>
-<li><strong>机械特性：</strong>接线器形状和尺寸、引脚数目和排列、固定和锁定装置等；</li>
-<li><strong>电气特性：</strong>接口电缆的各条线上的电压范围；</li>
-<li><strong>功能特性：</strong>某条线上的某一电平的电压的意义；</li>
-<li><strong>过程特性：</strong>对于不同功能的各种可能事件的出现顺序；</li>
-</ol>
-<h1 id="2-数据通信的基础知识"><a href="#2-数据通信的基础知识" class="headerlink" title="2.数据通信的基础知识"></a>2.数据通信的基础知识</h1><h2 id="2-1-数据通信系统模型"><a href="#2-1-数据通信系统模型" class="headerlink" title="2.1 数据通信系统模型"></a>2.1 数据通信系统模型</h2><p><strong>一个数据通信系统可划分为三大部分：</strong></p>
-<ol>
-<li><strong>源系统</strong>（或发送端、发送方)</li>
-<li><strong>传输系统</strong>（或传输网络）</li>
-<li><strong>目的系统</strong>（或接收端、接收方)</li>
-</ol>
-<p><img src="/../img/post/computer-network/2-1.jpg" srcset="/img/loading.gif" lazyload></p>
-<p><strong>源系统一般包括以下两个部分：</strong></p>
-<ul>
-<li><strong>源点（source）：</strong>源点设备产生要传输的数据，例如，从计算机的键盘输入汉字，计算机产生输出的数字比特流。源点又称为源站，或信源。</li>
-<li><strong>发送器：</strong>通常源点生成的数字比特流要通过发送器编码后才能够在传输系统中进行传输。典型的发送器就是调制器。</li>
-</ul>
-<p><strong>目的系统一般也包括以下两个部分：</strong></p>
-<ul>
-<li><strong>接收器：</strong>接收传输系统传送过来的信号，并把它转换为能够被目的设备处理的信息。典型的接收器就是解调器，它把来自传输线路上的模拟信号进行解调，提取出在发送端置入的消息，还原出发送端产生的数字比特流。</li>
-<li><strong>终点（destination）：</strong>终点设备从接收器获取传送来的数字比特流，然后把信息输出（例如，把汉字在计算机屏幕上显示出来)。终点又称为目的站，或信宿。</li>
-</ul>
-<h2 id="2-2-有关信道的几个基本概念"><a href="#2-2-有关信道的几个基本概念" class="headerlink" title="2.2 有关信道的几个基本概念"></a>2.2 有关信道的几个基本概念</h2><p><strong>从通信的双方信息交互的方式来看，有以下三种基本方式：</strong></p>
-<ul>
-<li>单项通信（单工通信）</li>
-<li>双向交替通信（半双工通信）</li>
-<li>双向同时通信（全双工通信）</li>
-</ul>
-<h3 id="2-2-1-常用编码方式"><a href="#2-2-1-常用编码方式" class="headerlink" title="2.2.1 常用编码方式"></a>2.2.1 常用编码方式</h3><p><img src="/../img/post/computer-network/2-2.jpg" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li><strong>不归零制：</strong>正电平代表1，负电平代表0。</li>
-<li><strong>归零制：</strong>正脉冲代表1，负脉冲代表0。</li>
-<li><strong>曼彻斯特编码：</strong>位周期中心的向上跳变代表0，位周期中心的向下跳变代表1。但也可反过来定义。</li>
-<li><strong>差分曼彻斯特编码：</strong>在每一位的中心处始终都有跳变。位开始边界有跳变代表0，而位开始边界没有跳变代表1。</li>
-</ul>
-<h3 id="2-2-2-常用编码方式"><a href="#2-2-2-常用编码方式" class="headerlink" title="2.2.2 常用编码方式"></a>2.2.2 常用编码方式</h3><p><img src="/../img/post/computer-network/2-3.jpg" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>调幅（AM）即载波的振幅随基带数字信号而变化。</li>
-<li>调频（FM）即载波的频率随基带数字信号而变化。</li>
-<li>调相（PM）即载波的初始相位随基带数字信号而变化。</li>
-</ul>
-<h3 id="2-2-3-信道的极限容量"><a href="#2-2-3-信道的极限容量" class="headerlink" title="2.2.3 信道的极限容量"></a>2.2.3 信道的极限容量</h3><p>在1948年，信息论的创始人香农（Shannon）推导出了著名的香农公式。香农公式指出：信道的极限信息传输速率是</p>
-<p>$$<br>信噪比&#x3D;\dfrac{S}{N}&#x3D;\dfrac{信号平均功率}{噪声平均功率}<br>$$</p>
-<p>$$<br>C &#x3D; W×log_2(1+S&#x2F;N)（bit&#x2F;s）<br>$$</p>
-<p>香农公式表明，信道的带宽或信道中的信噪比越大，信息的极限传输速率就越高。意义在于：<strong>只要信息传输速率低于信道的极限信息传输速率，就一定存在某种办法来实现无差错的传输。</strong></p>
-<h1 id="3-物理层下面的传输媒体"><a href="#3-物理层下面的传输媒体" class="headerlink" title="3.物理层下面的传输媒体"></a>3.物理层下面的传输媒体</h1><p>传输媒体也称为传输介质或传输媒介，它就是数据传输系统中在发送器和接收器之间的物理通路。</p>
-<p>可分为两大类：</p>
-<ul>
-<li><strong>引型传输媒体：</strong>电磁波被引导沿着固体媒体传播</li>
-<li><strong>非导引型传输媒体：</strong>指自由空间</li>
-</ul>
-<h2 id="3-1-引型传输媒体"><a href="#3-1-引型传输媒体" class="headerlink" title="3.1 引型传输媒体"></a>3.1 <strong>引型传输媒体</strong></h2><h3 id="3-1-1-双绞线"><a href="#3-1-1-双绞线" class="headerlink" title="3.1.1 双绞线"></a>3.1.1 双绞线</h3><p>双绞线也称为双扭线，是最古老但又是最常用的传输媒体。把两根互相绝缘的铜导线并排放在一起，然后用规则的方法绞合起来就构成了双绞线。绞合可减少对相邻导线的电磁干扰。使用双绞线最多的地方就是到处都有的电话系统。</p>
-<p><img src="/../img/post/computer-network/2-4.jpg" srcset="/img/loading.gif" lazyload></p>
-<h3 id="3-1-2-同轴电缆"><a href="#3-1-2-同轴电缆" class="headerlink" title="3.1.2 同轴电缆"></a>3.1.2 <strong>同轴电缆</strong></h3><p>同轴电缆由内导体铜质芯线（单股实心线或多股绞合线)、绝缘层、网状编织的外导体屏蔽层（也可以是单股的）以及保护塑料外层所组成。</p>
-<p>由于外导体屏蔽层的作用，同轴电缆具有很好的抗干扰特性，被广泛用于传输较高速率的数据。</p>
-<p><img src="/../img/post/computer-network/2-5.jpg" srcset="/img/loading.gif" lazyload></p>
-<h3 id="3-1-3-光缆（光纤）"><a href="#3-1-3-光缆（光纤）" class="headerlink" title="3.1.3 光缆（光纤）"></a>3.1.3 <strong>光缆（光纤）</strong></h3><p>光纤通信就是利用光导纤维（以下简称为光纤）传递光脉冲来进行通信。有光脉冲相当于1，而没有光脉冲相当于0。由于可见光的频率非常高，约为 10^8 MHz 的量级，因此一个光纤通信系统的传输带宽远远大于目前其他各种传输媒体的带宽。</p>
-<p><img src="/../img/post/computer-network/2-6.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>光纤不仅具有通信容量非常大的优点，而且还具有其他的一些特点：</p>
-<ol>
-<li>传输损耗小，中继距离长，对远距离传输特别经济。</li>
-<li>抗雷电和电磁干扰性能好。这在有大电流脉冲干扰的环境下尤为重要。</li>
-<li>无串音干扰，保密性好，也不易被窃听或截取数据。</li>
-<li>体积小，重量轻。这在现有电缆管道已拥塞不堪的情况下特别有利。</li>
-</ol>
-<h2 id="3-2-非引型传输媒体"><a href="#3-2-非引型传输媒体" class="headerlink" title="3.2 非引型传输媒体"></a>3.2 <strong>非引型传输媒体</strong></h2><h3 id="3-2-1-短波通信（高频通信）"><a href="#3-2-1-短波通信（高频通信）" class="headerlink" title="3.2.1 短波通信（高频通信）"></a>3.2.1 <strong>短波通信（高频通信）</strong></h3><p>短波通信（即高频通信）主要是靠电离层的反射。但电离层的不稳定所产生的衰落现象和电离层反射所产生的多径效应，使得短波信道的通信质量较差，一般都是低速传输。</p>
-<h3 id="3-2-2-无线电微波通信"><a href="#3-2-2-无线电微波通信" class="headerlink" title="3.2.2 无线电微波通信"></a>3.2.2 <strong>无线电微波通信</strong></h3><p>无线电微波通信在数据通信中占有重要地位。微波的频率范围为 300 MHz<del>300 GHz (波长 1m</del>1mm)，但主要使用2~40 GHz的频率范围。</p>
-<p>微波在空间主要是直线传播。由于微波会穿透电离层而进入宇宙空间，因此它不像短波那样可以经电离层反射传播到地面上很远的地方。</p>
-<p>传统的微波通信主要有两种方式，即<strong>地面微波接力通信</strong>和<strong>卫星通信</strong>。</p>
-<h1 id="4-信道复用技术"><a href="#4-信道复用技术" class="headerlink" title="4.信道复用技术"></a>4.信道复用技术</h1><h2 id="4-1-常用的信道复用技术"><a href="#4-1-常用的信道复用技术" class="headerlink" title="4.1 常用的信道复用技术"></a>4.1 常用的信道复用技术</h2><h3 id="4-1-1-频分复用-FDM"><a href="#4-1-1-频分复用-FDM" class="headerlink" title="4.1.1 频分复用 FDM"></a>4.1.1 <strong>频分复用 FDM</strong></h3><p><img src="/../img/post/computer-network/2-7.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>按频率分，通信过程中自始至终都占用这个频带，同时占用不同带宽资源。</p>
-<h3 id="4-1-2-时分复用-TDM"><a href="#4-1-2-时分复用-TDM" class="headerlink" title="4.1.2 时分复用 TDM"></a>4.1.2 <strong>时分复用 TDM</strong></h3><p><img src="/../img/post/computer-network/2-8.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>所有用户在不同时间占用同样的频率宽度。</p>
-<h3 id="4-1-3-统计时分复用"><a href="#4-1-3-统计时分复用" class="headerlink" title="4.1.3 统计时分复用"></a>4.1.<strong>3 统计时分复用</strong></h3><p>统计时分复用是一种改进的时分复用，它能明显地提高信道的利用率。集中器常使用这种统计时分复用。</p>
-<p><img src="/../img/post/computer-network/2-9.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>当一个帧的数据放满了，就发送出去。因此，STDM 帧不是固定分配时隙，而是按需动念地分配时隙。</p>
-<h3 id="4-1-4-波分复用"><a href="#4-1-4-波分复用" class="headerlink" title="4.1.4 波分复用"></a>4.1.4 <strong>波分复用</strong></h3><p>光的频分复用。</p>
-<h3 id="4-1-5-码分复用"><a href="#4-1-5-码分复用" class="headerlink" title="4.1.5 码分复用"></a>4.1.5 <strong>码分复用</strong></h3><p>码分复用 CDM 是另一种共享信道的方法。实际上，人们更常用的名词是码分多址 CDMA（Code Division Multiple Access）。</p>
-<p>每一个用户可以在同样的时间使用同样的频带进行通信。由于各用户使用经过特殊挑选的不同码型，因此各用户之间不会造成干扰。</p>
-<p><img src="/../img/post/computer-network/2-10.jpg" srcset="/img/loading.gif" lazyload></p>
-<h1 id="5-数字传输系统"><a href="#5-数字传输系统" class="headerlink" title="5.数字传输系统"></a>5.数字传输系统</h1><p>为了解决<strong>速率标准不统一</strong>和<strong>不是同步传输</strong>的问题，美国在 1988 年首先推出了一个数字传输标准叫做同步光纤网 SONET（Synchronous Optical Network）。</p>
-<p>SDH&#x2F;SONET 标准的制定，使北美、日本和欧洲这三个地区三种不同的数字传输体制在 STM-1 等级上获得了统一。这是第一次真正实现了数字传输体制上的世界性标准。现在 SDH&#x2F;SONET 标准已成为公认的新一代理想的传输网体制，因而对世界电信网络的发展具有重大的意义。SDH标准也适合于微波和卫星传输的技术体制。</p>
-<h1 id="6-宽带接入技术"><a href="#6-宽带接入技术" class="headerlink" title="6.宽带接入技术"></a>6.宽带接入技术</h1><h2 id="6-1-ADSL技术"><a href="#6-1-ADSL技术" class="headerlink" title="6.1 ADSL技术"></a>6.1 <strong>ADSL技术</strong></h2><p>非对称数字用户线技术是用数字技术对现有的模拟电话用户线进行改造，使它能够承载宽带数字业务。0~4kHZ 低端频谱给传统电话，原先未利用的高端频谱给用户上网。非对称指下行远远大于上行带宽。ADSL 传输距离取决于数据率和用户线的线径（线径约小衰减越大）。</p>
-<h2 id="6-2-光纤同轴混合网"><a href="#6-2-光纤同轴混合网" class="headerlink" title="6.2 光纤同轴混合网"></a>6.2 <strong>光纤同轴混合网</strong></h2><p>光纤同轴混合网是在有线电视网的基础上开发的一种居民宽带接入网，除可传送电视节目外，还能提供电诂、数据和其他宽带交互型业务。</p>
-<h2 id="6-3-FTTx技术"><a href="#6-3-FTTx技术" class="headerlink" title="6.3 FTTx技术"></a>6.3 <strong>FTTx技术</strong></h2><p>光纤到户 FTTH 是最好的选择，把光纤一直铺设到用户家庭。只有光纤在进入家门后，才把光信号转为电信号，以获得最高的上网速率。</p>
-<p>为了有效地利用光纤资源，在光纤干线和广大用户之间，还需要铺设一段中间的转换装置即光配线网 ODN（Optical Distribution Network），使得数十个家庭用户能够共享一根光纤干线。</p>
-<p><img src="/../img/post/computer-network/2-11.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>光线路终端 OLT（Optical Line Terminal）是连接到光纤干线的终端设备。OLT 把收到的下行数据发往无源的 1:N 光分路器，然后用广播方式向所有用户端的光网络单元ONU（Optical Network Unit）发送。典型的光分路器使用分路比是 1:32。</p>
+              <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="1-创建版本库"><a href="#1-创建版本库" class="headerlink" title="1.创建版本库"></a>1.创建版本库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 克隆远程版本库</span><br>git <span class="hljs-built_in">clone</span> &lt;url&gt;<br><br><span class="hljs-comment"># 初始化本地版本库</span><br>git init<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-修改和提交"><a href="#2-修改和提交" class="headerlink" title="2.修改和提交"></a>2.修改和提交</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看状态</span><br>git status<br><br><span class="hljs-comment"># 查看变更内容</span><br>git diff<br><br><span class="hljs-comment"># 跟踪所有改动过的文件</span><br>git add .<br><br><span class="hljs-comment">#以列表方式查看指定文件的提交历史</span><br>git add &lt;file&gt;<br><br><span class="hljs-comment">#文件改名</span><br>git <span class="hljs-built_in">mv</span> &lt;old&gt; &lt;new&gt;<br><br><span class="hljs-comment">#删除文件</span><br>git <span class="hljs-built_in">rm</span> &lt;file&gt;<br><br><span class="hljs-comment">#停止跟踪文件但不删除</span><br>git <span class="hljs-built_in">rm</span> --cached &lt;file&gt;<br><br><span class="hljs-comment">#提交所有更新过的文件</span><br>git commit -m <span class="hljs-string">&quot;commit message&quot;</span><br><br><span class="hljs-comment">#修改最后一次提交</span><br>git commit --amend<br></code></pre></td></tr></table></figure>
+
+<h2 id="3-查看提交历史"><a href="#3-查看提交历史" class="headerlink" title="3.查看提交历史"></a>3.查看提交历史</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看提交历史</span><br>git <span class="hljs-built_in">log</span><br><br><span class="hljs-comment"># 查看指定文件的提交历史</span><br>git <span class="hljs-built_in">log</span> -p &lt;file&gt;<br><br><span class="hljs-comment"># 以列表方式查看指定文件的提交历史</span><br>git blame &lt;file&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="4-撤销"><a href="#4-撤销" class="headerlink" title="4.撤销"></a>4.撤销</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 撤消工作目录中所有未提交文件的修改内容</span><br>git reset --hard HEAD<br><br><span class="hljs-comment"># 撤消指定的未提交文件的改内容</span><br>git checkout HEAD &lt;file&gt;<br><br><span class="hljs-comment"># 撤消指定的提交</span><br>git revert &lt;commit&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="5-分支与标签"><a href="#5-分支与标签" class="headerlink" title="5.分支与标签"></a>5.分支与标签</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 显示所有本地分支</span><br>git branch<br><br><span class="hljs-comment"># 切换到指定分支或标签</span><br>git checkout &lt;branch/tag&gt;<br><br><span class="hljs-comment"># 创建新分支</span><br>git branch &lt;new-branch&gt;<br><br><span class="hljs-comment"># 删除本地分支</span><br>git branch -d &lt;branch&gt;<br><br><span class="hljs-comment"># 列出所有本地标签</span><br>git tag<br><br><span class="hljs-comment"># 基于最新提交创建标签</span><br>git tag &lt;tagname&gt;<br><br><span class="hljs-comment"># 删除标签</span><br>git tag -d &lt;tagname&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="6-合并与衍合"><a href="#6-合并与衍合" class="headerlink" title="6.合并与衍合"></a>6.合并与衍合</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#合并指定分支到当前分支</span><br>git merge &lt;branch&gt;<br><br><span class="hljs-comment">#行合指定分支到当前分支</span><br>git rebase &lt;branch&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="7-远程操作"><a href="#7-远程操作" class="headerlink" title="7.远程操作"></a>7.远程操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看远程版本库信息</span><br>git remote -v<br><br><span class="hljs-comment"># 查看指定远程版本库信息</span><br>git remote show &lt;remote&gt;<br><br><span class="hljs-comment"># 添加远程版本库</span><br>git remote add &lt;remote&gt; &lt;url&gt;<br><br><span class="hljs-comment"># 从远程库获取代码</span><br>git fetch &lt;remote&gt;<br><br><span class="hljs-comment"># 下载代码及快速合并</span><br>git pull &lt;remote&gt; &lt;branch&gt;<br><br><span class="hljs-comment"># 上传代码及快速合并</span><br>git push &lt;remote&gt; &lt;branch&gt;<br><br><span class="hljs-comment"># 删除远程分支或标签</span><br>git push &lt;remote&gt;:&lt;branch/tag-name&gt;<br><br><span class="hljs-comment"># 上传所有标签</span><br>git push --tags<br></code></pre></td></tr></table></figure>
+
+<h1 id="实际问题"><a href="#实际问题" class="headerlink" title="实际问题"></a>实际问题</h1><h2 id="1-修改历史全部的-commit"><a href="#1-修改历史全部的-commit" class="headerlink" title="1.修改历史全部的 commit"></a>1.修改历史全部的 commit</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 修改最后一次提交</span><br>git commit --amend<br><br><span class="hljs-comment"># 修改最近几次的 commit（序号是倒序，但不包含第一条 commit）</span><br>git rebase -i HEAD~10<br><br><span class="hljs-comment"># 修改第一条 commit</span><br>git rebase -i --root<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-冲突合并"><a href="#2-冲突合并" class="headerlink" title="2.冲突合并"></a>2.冲突合并</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 在解决合并冲突之前，我们应该设置 Git 使用的 diff 工具</span><br>git config merge.tool meld<br>git config merge.conflictstyle diff3<br>git config mergetool.prompt <span class="hljs-literal">false</span><br><br><span class="hljs-comment"># 这将启动 meld</span><br>git mergetool<br></code></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p><img src="/../img/post/git/git-1.jpg" srcset="/img/loading.gif" lazyload></p>
 
               
             </div>
@@ -386,7 +318,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="category-chain-item">计算机网络</a>
+  <a href="/categories/Git/" class="category-chain-item">Git</a>
   
   
 
@@ -401,7 +333,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AF%BE%E6%9C%AC/">#课本</a>
+        <a href="/tags/Git/">#Git</a>
       
     </div>
   
@@ -413,8 +345,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>计算机网络 第二章：物理层</div>
-      <div>https://pudding.nousbuild.com/computer-network-2/</div>
+      <div>Git 命令</div>
+      <div>https://pudding.nousbuild.com/git/</div>
     </div>
     <div class="license-meta">
       
@@ -426,7 +358,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年4月10日</div>
+          <div>2022年7月26日</div>
         </div>
       
       
@@ -473,18 +405,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/computer-network-3/" title="计算机网络 第三章：数据链路层">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">计算机网络 第三章：数据链路层</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/computer-network-1/" title="计算机网络 第一章：概述">
-                        <span class="hidden-mobile">计算机网络 第一章：概述</span>
+                      <a href="/computer-network-9/" title="计算机网络 第九章：无线网络和移动网络">
+                        <span class="hidden-mobile">计算机网络 第九章：无线网络和移动网络</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -505,7 +431,7 @@
         var options = Object.assign(
           {"clientID":"3d7d322afed4a293d6ac","clientSecret":"13a2463fec33044c22ddc5678f8a29086b20eb19","repo":"pudding0503.github.io","owner":"pudding0503","admin":["pudding0503"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'd5188948e0de8b17e4e879512a9768e5'
+            id: '9bec7083027963d9f9ceae2cc7474de5'
           }
         )
         var gitalk = new Gitalk(options);
@@ -562,12 +488,6 @@
 
 
   
-
-
-  
-  
-
-
 
 
 
@@ -853,44 +773,6 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        MathJax = {
-          tex    : {
-            inlineMath: { '[+]': [['$', '$']] }
-          },
-          loader : {
-            load: ['ui/lazy']
-          },
-          options: {
-            renderActions: {
-              findScript    : [10, doc => {
-                document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-                  const display = !!node.type.match(/; *mode=display/);
-                  const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                  const text = document.createTextNode('');
-                  node.parentNode.replaceChild(text, node);
-                  math.start = { node: text, delim: '', n: 0 };
-                  math.end = { node: text, delim: '', n: 0 };
-                  doc.math.push(math);
-                });
-              }, '', false],
-              insertedScript: [200, () => {
-                document.querySelectorAll('mjx-container').forEach(node => {
-                  let target = node.parentNode;
-                  if (target.nodeName.toLowerCase() === 'li') {
-                    target.parentNode.classList.add('has-jax');
-                  }
-                });
-              }, '', false]
-            }
-          }
-        };
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.0/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 

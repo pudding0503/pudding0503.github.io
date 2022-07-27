@@ -16,23 +16,23 @@
   <meta name="author" content="Haoning Wu">
   <meta name="keywords" content="BLOG,博客,笔记,计算机,网络,算法,数据,开发,C,C++,Python,Windows">
   
-    <meta name="description" content="Git 常用命令总结和常见问题解决。">
+    <meta name="description" content="正则表达式记忆手册以及常用的正则表达式。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git 命令">
-<meta property="og:url" content="https://pudding.nousbuild.com/git/">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="https://pudding.nousbuild.com/regular-expression/">
 <meta property="og:site_name" content="布丁笔记簿">
-<meta property="og:description" content="Git 常用命令总结和常见问题解决。">
+<meta property="og:description" content="正则表达式记忆手册以及常用的正则表达式。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pudding.nousbuild.com/img/post/git/index.jpg">
-<meta property="article:published_time" content="2022-07-26T09:45:00.000Z">
+<meta property="og:image" content="https://pudding.nousbuild.com/img/post/regular-expression/index.jpg">
+<meta property="article:published_time" content="2022-07-27T06:01:00.000Z">
 <meta property="article:modified_time" content="2022-07-27T06:12:57.357Z">
 <meta property="article:author" content="Haoning Wu">
-<meta property="article:tag" content="Git">
+<meta property="article:tag" content="正则表达式">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pudding.nousbuild.com/img/post/git/index.jpg">
+<meta name="twitter:image" content="https://pudding.nousbuild.com/img/post/regular-expression/index.jpg">
   
   
-  <title>Git 命令 - 布丁笔记簿</title>
+  <title>正则表达式 - 布丁笔记簿</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -195,13 +195,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/post/git/banner.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/post/regular-expression/banner.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Git 命令"></span>
+            <span id="subtitle" data-typed-text="正则表达式"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-07-26 17:45" pubdate>
-          2022年7月26日 下午
+        <time datetime="2022-07-27 14:01" pubdate>
+          2022年7月27日 下午
         </time>
       </span>
     
@@ -225,7 +225,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1.5k 字
+          5.1k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
           <!-- compatible with older versions-->
-          13 分钟
+          43 分钟
         
       </span>
     
@@ -275,32 +275,695 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Git 命令</h1>
+            <h1 style="display: none">正则表达式</h1>
             
             <div class="markdown-body">
               
-              <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="1-创建版本库"><a href="#1-创建版本库" class="headerlink" title="1.创建版本库"></a>1.创建版本库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 克隆远程版本库</span><br>git <span class="hljs-built_in">clone</span> &lt;url&gt;<br><br><span class="hljs-comment"># 初始化本地版本库</span><br>git init<br></code></pre></td></tr></table></figure>
-
-<h2 id="2-修改和提交"><a href="#2-修改和提交" class="headerlink" title="2.修改和提交"></a>2.修改和提交</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看状态</span><br>git status<br><br><span class="hljs-comment"># 查看变更内容</span><br>git diff<br><br><span class="hljs-comment"># 跟踪所有改动过的文件</span><br>git add .<br><br><span class="hljs-comment">#以列表方式查看指定文件的提交历史</span><br>git add &lt;file&gt;<br><br><span class="hljs-comment">#文件改名</span><br>git <span class="hljs-built_in">mv</span> &lt;old&gt; &lt;new&gt;<br><br><span class="hljs-comment">#删除文件</span><br>git <span class="hljs-built_in">rm</span> &lt;file&gt;<br><br><span class="hljs-comment">#停止跟踪文件但不删除</span><br>git <span class="hljs-built_in">rm</span> --cached &lt;file&gt;<br><br><span class="hljs-comment">#提交所有更新过的文件</span><br>git commit -m <span class="hljs-string">&quot;commit message&quot;</span><br><br><span class="hljs-comment">#修改最后一次提交</span><br>git commit --amend<br></code></pre></td></tr></table></figure>
-
-<h2 id="3-查看提交历史"><a href="#3-查看提交历史" class="headerlink" title="3.查看提交历史"></a>3.查看提交历史</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看提交历史</span><br>git <span class="hljs-built_in">log</span><br><br><span class="hljs-comment"># 查看指定文件的提交历史</span><br>git <span class="hljs-built_in">log</span> -p &lt;file&gt;<br><br><span class="hljs-comment"># 以列表方式查看指定文件的提交历史</span><br>git blame &lt;file&gt;<br></code></pre></td></tr></table></figure>
-
-<h2 id="4-撤销"><a href="#4-撤销" class="headerlink" title="4.撤销"></a>4.撤销</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 撤消工作目录中所有未提交文件的修改内容</span><br>git reset --hard HEAD<br><br><span class="hljs-comment"># 撤消指定的未提交文件的改内容</span><br>git checkout HEAD &lt;file&gt;<br><br><span class="hljs-comment"># 撤消指定的提交</span><br>git revert &lt;commit&gt;<br></code></pre></td></tr></table></figure>
-
-<h2 id="5-分支与标签"><a href="#5-分支与标签" class="headerlink" title="5.分支与标签"></a>5.分支与标签</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 显示所有本地分支</span><br>git branch<br><br><span class="hljs-comment"># 切换到指定分支或标签</span><br>git checkout &lt;branch/tag&gt;<br><br><span class="hljs-comment"># 创建新分支</span><br>git branch &lt;new-branch&gt;<br><br><span class="hljs-comment"># 删除本地分支</span><br>git branch -d &lt;branch&gt;<br><br><span class="hljs-comment"># 列出所有本地标签</span><br>git tag<br><br><span class="hljs-comment"># 基于最新提交创建标签</span><br>git tag &lt;tagname&gt;<br><br><span class="hljs-comment"># 删除标签</span><br>git tag -d &lt;tagname&gt;<br></code></pre></td></tr></table></figure>
-
-<h2 id="6-合并与衍合"><a href="#6-合并与衍合" class="headerlink" title="6.合并与衍合"></a>6.合并与衍合</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#合并指定分支到当前分支</span><br>git merge &lt;branch&gt;<br><br><span class="hljs-comment">#行合指定分支到当前分支</span><br>git rebase &lt;branch&gt;<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-远程操作"><a href="#7-远程操作" class="headerlink" title="7.远程操作"></a>7.远程操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看远程版本库信息</span><br>git remote -v<br><br><span class="hljs-comment"># 查看指定远程版本库信息</span><br>git remote show &lt;remote&gt;<br><br><span class="hljs-comment"># 添加远程版本库</span><br>git remote add &lt;remote&gt; &lt;url&gt;<br><br><span class="hljs-comment"># 从远程库获取代码</span><br>git fetch &lt;remote&gt;<br><br><span class="hljs-comment"># 下载代码及快速合并</span><br>git pull &lt;remote&gt; &lt;branch&gt;<br><br><span class="hljs-comment"># 上传代码及快速合并</span><br>git push &lt;remote&gt; &lt;branch&gt;<br><br><span class="hljs-comment"># 删除远程分支或标签</span><br>git push &lt;remote&gt;:&lt;branch/tag-name&gt;<br><br><span class="hljs-comment"># 上传所有标签</span><br>git push --tags<br></code></pre></td></tr></table></figure>
-
-<h1 id="实际问题"><a href="#实际问题" class="headerlink" title="实际问题"></a>实际问题</h1><h2 id="1-修改历史全部的-commit"><a href="#1-修改历史全部的-commit" class="headerlink" title="1.修改历史全部的 commit"></a>1.修改历史全部的 commit</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 修改最后一次提交</span><br>git commit --amend<br><br><span class="hljs-comment"># 修改最近几次的 commit（序号是倒序，但不包含第一条 commit）</span><br>git rebase -i HEAD~10<br><br><span class="hljs-comment"># 修改第一条 commit</span><br>git rebase -i --root<br></code></pre></td></tr></table></figure>
-
-<h2 id="2-冲突合并"><a href="#2-冲突合并" class="headerlink" title="2.冲突合并"></a>2.冲突合并</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 在解决合并冲突之前，我们应该设置 Git 使用的 diff 工具</span><br>git config merge.tool meld<br>git config merge.conflictstyle diff3<br>git config mergetool.prompt <span class="hljs-literal">false</span><br><br><span class="hljs-comment"># 这将启动 meld</span><br>git mergetool<br></code></pre></td></tr></table></figure>
-
-
-
-<hr>
-<p><img src="/../img/post/git/git-1.jpg" srcset="/img/loading.gif" lazyload></p>
+              <h1 id="1-基础正则表达式速查表"><a href="#1-基础正则表达式速查表" class="headerlink" title="1.基础正则表达式速查表"></a>1.基础正则表达式速查表</h1><h2 id="1-1-字符"><a href="#1-1-字符" class="headerlink" title="1.1 字符"></a>1.1 字符</h2><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[abc]</td>
+<td>字符集。匹配集合中所含的任一字符。</td>
+</tr>
+<tr>
+<td>[^abc]</td>
+<td>否定字符集。匹配任何不在集合中的字符。</td>
+</tr>
+<tr>
+<td>[a-z]</td>
+<td>字符范围。匹配指定范围内的任意字符。</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配除换行符以外的任何单个字符。</td>
+</tr>
+<tr>
+<td>\</td>
+<td>转义字符。</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配任何字母数字，包括下划线（等价于[A-Za-z0-9_]）。</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>匹配任何非字母数字（等价于[^A-Za-z0-9_]）。</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>数字。匹配任何数字。</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>非数字。匹配任何非数字字符。</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>空白。匹配任何空白字符，包括空格、制表符等。</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>非空白。匹配任何非空白字符。</td>
+</tr>
+</tbody></table>
+<h2 id="1-2-分组和引用"><a href="#1-2-分组和引用" class="headerlink" title="1.2 分组和引用"></a>1.2 分组和引用</h2><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(expression)</td>
+<td>分组。匹配括号里的整个表达式。</td>
+</tr>
+<tr>
+<td>(?:expression)</td>
+<td>非捕获分组。匹配括号里的整个字符串但不获取匹配结果，拿不到分组引用。</td>
+</tr>
+<tr>
+<td>\num</td>
+<td>对前面所匹配分组的引用。比如(\d)\1可以匹配两个相同的数字，(Code)(Sheep)\1\2则可以匹配CodeSheepCodeSheep。</td>
+</tr>
+</tbody></table>
+<h2 id="1-3-锚点-x2F-边界"><a href="#1-3-锚点-x2F-边界" class="headerlink" title="1.3 锚点&#x2F;边界"></a>1.3 锚点&#x2F;边界</h2><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>^</td>
+<td>匹配字符串或行开头。</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符串或行结尾。</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>匹配单词边界。比如Sheep\b可以匹配CodeSheep末尾的Sheep，不能匹配CodeSheepCode中的Sheep。</td>
+</tr>
+<tr>
+<td>\B</td>
+<td>匹配非单词边界。比如Code\B可以匹配HelloCodeSheep中的Code，不能匹配HelloCode中的Code。</td>
+</tr>
+</tbody></table>
+<h2 id="1-4-数量表示"><a href="#1-4-数量表示" class="headerlink" title="1.4 数量表示"></a>1.4 数量表示</h2><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>?</td>
+<td>匹配前面的表达式0个或1个。即表示可选项。</td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配前面的表达式至少1个。</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配前面的表达式0个或多个。</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>{m}</td>
+<td>匹配前面的表达式m个。</td>
+</tr>
+<tr>
+<td>{m,}</td>
+<td>匹配前面的表达式最少m个。</td>
+</tr>
+<tr>
+<td>{m,n}</td>
+<td>匹配前面的表达式最少m个，最多n个。</td>
+</tr>
+</tbody></table>
+<h2 id="1-5-预查断言"><a href="#1-5-预查断言" class="headerlink" title="1.5 预查断言"></a>1.5 预查断言</h2><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(?&#x3D;)</td>
+<td>正向预查。比如Code(?&#x3D;Sheep)能匹配CodeSheep中的Code，但不能匹配CodePig中的Code。</td>
+</tr>
+<tr>
+<td>(?!)</td>
+<td>正向否定预查。比如Code(?!Sheep)不能匹配CodeSheep中的Code，但能匹配CodePig中的Code。</td>
+</tr>
+<tr>
+<td>(?&lt;&#x3D;)</td>
+<td>反向预查。比如(?&lt;&#x3D;Code)Sheep能匹配CodeSheep中的Sheep，但不能匹配ReadSheep中的Sheep。</td>
+</tr>
+<tr>
+<td>(?&lt;!)</td>
+<td>反向否定预查。比如(?&lt;!Code)Sheep不能匹配CodeSheep中的Sheep，但能匹配ReadSheep中的Sheep。</td>
+</tr>
+</tbody></table>
+<h2 id="1-6-特殊标志"><a href="#1-6-特殊标志" class="headerlink" title="1.6 特殊标志"></a>1.6 特殊标志</h2><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#x2F;…&#x2F;i</td>
+<td>忽略大小写。</td>
+</tr>
+<tr>
+<td>&#x2F;…&#x2F;g</td>
+<td>全局匹配。</td>
+</tr>
+<tr>
+<td>&#x2F;…&#x2F;m</td>
+<td>多行修饰符。用于多行匹配。</td>
+</tr>
+</tbody></table>
+<h1 id="2-常用正则表达式示例"><a href="#2-常用正则表达式示例" class="headerlink" title="2.常用正则表达式示例"></a>2.常用正则表达式示例</h1><h2 id="2-1-数字校验"><a href="#2-1-数字校验" class="headerlink" title="2.1 数字校验"></a>2.1 数字校验</h2><table>
+<thead>
+<tr>
+<th>描述</th>
+<th>正则表达式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数字</td>
+<td>^[0-9]*$</td>
+<td></td>
+</tr>
+<tr>
+<td>n位数字</td>
+<td>^\d{n}$</td>
+<td></td>
+</tr>
+<tr>
+<td>至少n位数字</td>
+<td>^\d{n,}$</td>
+<td></td>
+</tr>
+<tr>
+<td>m~n位数字</td>
+<td>^\d{m,n}$</td>
+<td></td>
+</tr>
+<tr>
+<td>整数</td>
+<td>^(-?[1-9]\d*)$</td>
+<td>非0开头，包括正整数和负整数</td>
+</tr>
+<tr>
+<td>正整数</td>
+<td>^[1-9]\d*$</td>
+<td></td>
+</tr>
+<tr>
+<td>负整数</td>
+<td>^-[1-9]\d*$</td>
+<td></td>
+</tr>
+<tr>
+<td>非负整数</td>
+<td>^(([1-9]\d*)</td>
+<td>0)$</td>
+</tr>
+<tr>
+<td>非正整数</td>
+<td>^((-[1-9]\d*)</td>
+<td>0)$</td>
+</tr>
+<tr>
+<td>浮点数</td>
+<td>^-?(?:[1-9]\d<em>.\d</em></td>
+<td>0.\d*[1-9]\d*</td>
+</tr>
+<tr>
+<td>正浮点数</td>
+<td>^(?:[1-9]\d<em>.\d</em></td>
+<td>0.\d*[1-9]\d*)$</td>
+</tr>
+<tr>
+<td>负浮点数</td>
+<td>^-(?:[1-9]\d<em>.\d</em></td>
+<td>0.\d*[1-9]\d*)$</td>
+</tr>
+<tr>
+<td>非正浮点数</td>
+<td>^(?:-(?:[1-9]\d*.\d+</td>
+<td>0.\d*[1-9]\d*)</td>
+</tr>
+<tr>
+<td>非负浮点数</td>
+<td>^(?:[1-9]\d*.\d+</td>
+<td>0.\d+</td>
+</tr>
+<tr>
+<td>仅一位小数</td>
+<td>^-?(?:0</td>
+<td>[1-9][0-9]*).[0-9]{1}$</td>
+</tr>
+<tr>
+<td>最少一位小数</td>
+<td>^-?(?:0</td>
+<td>[1-9][0-9]*).[0-9]{1,}$</td>
+</tr>
+<tr>
+<td>最多两位小数</td>
+<td>^-?(?:0</td>
+<td>[1-9][0-9]*).[0-9]{1,2}$</td>
+</tr>
+<tr>
+<td>连续重复的数字</td>
+<td>^(\d)\1+$</td>
+<td>例如：111，222</td>
+</tr>
+</tbody></table>
+<h2 id="2-2-字符校验"><a href="#2-2-字符校验" class="headerlink" title="2.2 字符校验"></a>2.2 字符校验</h2><table>
+<thead>
+<tr>
+<th>描述</th>
+<th>正则表达式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>中文</td>
+<td>^[\u4E00-\u9FA5]+$</td>
+<td></td>
+</tr>
+<tr>
+<td>全角字符</td>
+<td>^[\uFF00-\uFFFF]+$</td>
+<td></td>
+</tr>
+<tr>
+<td>半角字符</td>
+<td>^[\u0000-\u00FF]+$</td>
+<td></td>
+</tr>
+<tr>
+<td>英文字符串（大写）</td>
+<td>^[A-Z]+$</td>
+<td></td>
+</tr>
+<tr>
+<td>英文字符串（小写）</td>
+<td>^[a-z]+$</td>
+<td></td>
+</tr>
+<tr>
+<td>英文字符串（不区分大小写）</td>
+<td>^[A-Za-z]+$</td>
+<td></td>
+</tr>
+<tr>
+<td>中文和数字</td>
+<td>^(?:[\u4E00-\u9FA5]{0,}</td>
+<td>\d)+$</td>
+</tr>
+<tr>
+<td>英文和数字</td>
+<td>^[A-Za-z0-9]+$</td>
+<td></td>
+</tr>
+<tr>
+<td>数字、英文字母或者下划线组成的字符串</td>
+<td>^\w+$</td>
+<td></td>
+</tr>
+<tr>
+<td>中文、英文、数字包括下划线</td>
+<td>^[\u4E00-\u9FA5\w]+$</td>
+<td></td>
+</tr>
+<tr>
+<td>不含字母的字符串</td>
+<td>^[^A-Za-z]*$</td>
+<td></td>
+</tr>
+<tr>
+<td>连续重复的字符串</td>
+<td>^(.)\1+$</td>
+<td>例如：aaa，bbb</td>
+</tr>
+<tr>
+<td>长度为n的字符串</td>
+<td>^.{n}$</td>
+<td></td>
+</tr>
+<tr>
+<td>ASCII</td>
+<td>^[ -~]$</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="2-3-日期和时间校验"><a href="#2-3-日期和时间校验" class="headerlink" title="2.3 日期和时间校验"></a>2.3 日期和时间校验</h2><table>
+<thead>
+<tr>
+<th>描述</th>
+<th>正则表达式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>日期</td>
+<td>^\d{1,4}-(?:1[0-2]</td>
+<td>0?[1-9])-(?:0?[1-9]</td>
+</tr>
+<tr>
+<td>日期</td>
+<td>^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]</td>
+<td>1[0-2])-(?:0[1-9]</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>^(?:1[0-2]</td>
+<td>0?[1-9]):[0-5]\d:[0-5]\d$</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>^(?:[01]\d</td>
+<td>2[0-3]):[0-5]\d:[0-5]\d$</td>
+</tr>
+<tr>
+<td>日期+时间</td>
+<td>^(\d{1,4}-(?:1[0-2]</td>
+<td>0?[1-9])-(?:0?[1-9]</td>
+</tr>
+</tbody></table>
+<h2 id="2-4-日常生活相关"><a href="#2-4-日常生活相关" class="headerlink" title="2.4 日常生活相关"></a>2.4 日常生活相关</h2><table>
+<thead>
+<tr>
+<th>描述</th>
+<th>正则表达式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>中文名</td>
+<td>^[\u4E00-\u9FA5·]{2,16}$</td>
+<td></td>
+</tr>
+<tr>
+<td>英文名</td>
+<td>^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$</td>
+<td></td>
+</tr>
+<tr>
+<td>车牌号</td>
+<td>^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领][A-HJ-NP-Z][A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]$</td>
+<td>不含新能源</td>
+</tr>
+<tr>
+<td>车牌号</td>
+<td>^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领]<a href="?:(?:%5BA-HJ-NP-Z0-9%5D%7B4%7D%5BA-HJ-NP-Z0-9%E6%8C%82%E5%AD%A6%E8%AD%A6%E6%B8%AF%E6%BE%B3%5D">A-HJ-NP-Z</a></td>
+<td>(?:(?:\d{5}[A-HJK])</td>
+</tr>
+<tr>
+<td>火车车次</td>
+<td>^[GCDZTSPKXLY1-9]\d{1,4}$</td>
+<td>例如：G1234</td>
+</tr>
+<tr>
+<td>手机号</td>
+<td>^(?:(?:+</td>
+<td>00)86)?1[3-9]\d{9}$</td>
+</tr>
+<tr>
+<td>手机号</td>
+<td>^(?:(?:+</td>
+<td>00)86)?1(?:(?:3[\d])</td>
+</tr>
+<tr>
+<td>固话号码</td>
+<td>^(?:(?:\d{3}-)?\d{8}</td>
+<td>^(?:\d{4}-)?\d{7,8})(?:-\d+)?$</td>
+</tr>
+<tr>
+<td>手机IMEI码</td>
+<td>^\d{15,17}$</td>
+<td>一般是15位</td>
+</tr>
+<tr>
+<td>邮编</td>
+<td>^(?:0[1-7]</td>
+<td>1[0-356]</td>
+</tr>
+<tr>
+<td>统一社会信用代码</td>
+<td>^[0-9A-HJ-NPQRTUWXY]{2}\d{6}[0-9A-HJ-NPQRTUWXY]{10}$</td>
+<td></td>
+</tr>
+<tr>
+<td>身份证号码(1代)</td>
+<td>^[1-9]\d{7}(?:0\d</td>
+<td>10</td>
+</tr>
+<tr>
+<td>身份证号码(2代)</td>
+<td>^[1-9]\d{5}(?:18</td>
+<td>19</td>
+</tr>
+<tr>
+<td>QQ号</td>
+<td>^[1-9][0-9]{4,}$</td>
+<td>一般是5到10位</td>
+</tr>
+<tr>
+<td>微信号</td>
+<td>^[a-zA-Z][-_a-zA-Z0-9]{5,19}$</td>
+<td>一般6~20位，字母开头，可包含字母、数字、-、_，不含特殊字符</td>
+</tr>
+<tr>
+<td>股票代码</td>
+<td>^(s[hz]</td>
+<td>S[HZ])(000[\d]{3}</td>
+</tr>
+<tr>
+<td>银行卡卡号</td>
+<td>^[1-9]{1}(?:\d{15}</td>
+<td>\d{18})$</td>
+</tr>
+</tbody></table>
+<h2 id="2-5-互联网相关"><a href="#2-5-互联网相关" class="headerlink" title="2.5 互联网相关"></a>2.5 互联网相关</h2><table>
+<thead>
+<tr>
+<th>描述</th>
+<th>正则表达式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>域名</td>
+<td>^[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(?:.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$</td>
+<td>例如：r2coding.com</td>
+</tr>
+<tr>
+<td>网址</td>
+<td>^(?:https?://)?[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(?:.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$</td>
+<td>例如：<a target="_blank" rel="noopener" href="https://www.r2coding.com/">https://www.r2coding.com/</a></td>
+</tr>
+<tr>
+<td>带端口号的网址(或IP)</td>
+<td>^(?:https?://)?[\w-]+(?:.[\w-]+)+:\d{1,5}/?$</td>
+<td>例如：<a target="_blank" rel="noopener" href="http://127.0.0.1:8888/">http://127.0.0.1:8888/</a></td>
+</tr>
+<tr>
+<td>URL</td>
+<td>^https?://(?:www.)?[-a-zA-Z0-9@:%._+<del>#&#x3D;]{1,256}.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()!@:%_+.</del>#?&amp;//&#x3D;]*)$</td>
+<td>例如：<a target="_blank" rel="noopener" href="https://www.r2coding.com/#/README?id=1">https://www.r2coding.com/#/README?id=1</a></td>
+</tr>
+<tr>
+<td>邮箱email</td>
+<td>^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(?:.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$</td>
+<td>支持中文，例如：<a href="mailto:&#99;&#111;&#100;&#x65;&#x73;&#x68;&#101;&#x65;&#112;&#64;&#x63;&#115;&#46;&#99;&#x6f;&#x6d;">&#99;&#111;&#100;&#x65;&#x73;&#x68;&#101;&#x65;&#112;&#64;&#x63;&#115;&#46;&#99;&#x6f;&#x6d;</a></td>
+</tr>
+<tr>
+<td>用户名</td>
+<td>^[a-zA-Z0-9_-]{4,20}$</td>
+<td>4到20位</td>
+</tr>
+<tr>
+<td>弱密码</td>
+<td>^[\w]{6,16}$</td>
+<td>6~16位，包含大小写字母和数字的组合</td>
+</tr>
+<tr>
+<td>强密码</td>
+<td>^.<em>(?&#x3D;.{6,})(?&#x3D;.<em>\d)(?&#x3D;.</em>[A-Z])(?&#x3D;.</em>[a-z])(?&#x3D;.<em>[!@.#$%^&amp;</em>? ]).*$</td>
+<td>至少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符</td>
+</tr>
+<tr>
+<td>端口号</td>
+<td>^(?:[0-9]</td>
+<td>[1-9][0-9]{1,3}</td>
+</tr>
+<tr>
+<td>IPv4地址</td>
+<td>^(?:(?:\d</td>
+<td>[1-9]\d</td>
+</tr>
+<tr>
+<td>IPv4地址+端口</td>
+<td>^(?:(?:\d</td>
+<td>[1-9]\d</td>
+</tr>
+<tr>
+<td>IPv6地址</td>
+<td>^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}</td>
+<td>([0-9a-fA-F]{1,4}:){1,7}:</td>
+</tr>
+<tr>
+<td>IPv6地址+端口</td>
+<td>^[(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}</td>
+<td>([0-9a-fA-F]{1,4}:){1,7}:</td>
+</tr>
+<tr>
+<td>子网掩码</td>
+<td>^(?:254</td>
+<td>252</td>
+</tr>
+<tr>
+<td>MAC地址</td>
+<td>^(?:(?:[a-f0-9A-F]{2}:){5}</td>
+<td>(?:[a-f0-9A-F]{2}-){5})[a-f0-9A-F]{2}$</td>
+</tr>
+<tr>
+<td>Version版本号</td>
+<td>^\d+(?:.\d+){2}$</td>
+<td>例如：12.1.1</td>
+</tr>
+<tr>
+<td>图片后缀</td>
+<td>.(gif</td>
+<td>png</td>
+</tr>
+<tr>
+<td>视频后缀</td>
+<td>.(swf</td>
+<td>avi</td>
+</tr>
+<tr>
+<td>图片链接</td>
+<td>(?:https?://)?[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(?:.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+.+.(gif</td>
+<td>png</td>
+</tr>
+<tr>
+<td>视频链接</td>
+<td>(?:https?://)?[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(?:.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+.+.(swf</td>
+<td>avi</td>
+</tr>
+<tr>
+<td>迅雷链接</td>
+<td>thunderx?://[a-zA-Z\d]+&#x3D;</td>
+<td></td>
+</tr>
+<tr>
+<td>ed2k链接</td>
+<td>ed2k://|file|.+|/</td>
+<td></td>
+</tr>
+<tr>
+<td>磁力链接</td>
+<td>magnet:?xt&#x3D;urn:btih:[0-9a-fA-F]{40,}.*</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="2-6-其他"><a href="#2-6-其他" class="headerlink" title="2.6 其他"></a>2.6 其他</h2><table>
+<thead>
+<tr>
+<th>描述</th>
+<th>正则表达式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Windows文件路径</td>
+<td>^[a-zA-Z]:(?:\[\w\u4E00-\u9FA5\s]+)+[.\w\u4E00-\u9FA5\s]+$</td>
+<td>例如：C:\Users\Administrator\Desktop\a.txt</td>
+</tr>
+<tr>
+<td>Windows文件夹路径</td>
+<td>^[a-zA-Z]:(?:\[\w\u4E00-\u9FA5\s]+)+$</td>
+<td>例如：C:\Users\Administrator\Desktop</td>
+</tr>
+<tr>
+<td>Linux文件路径</td>
+<td>^/(?:[^&#x2F;]+/)*[^&#x2F;]+$</td>
+<td>例如：&#x2F;root&#x2F;library&#x2F;a.txt</td>
+</tr>
+<tr>
+<td>Linux文件夹路径</td>
+<td>^/(?:[^&#x2F;]+/)*$</td>
+<td>例如：&#x2F;root&#x2F;library&#x2F;</td>
+</tr>
+<tr>
+<td>MD5格式</td>
+<td>^(?:[a-f\d]{32}</td>
+<td>[A-F\d]{32})$</td>
+</tr>
+<tr>
+<td>BASE64格式</td>
+<td>^\s<em>data:(?:[a-z]+/[a-z0-9-+.]+(?:;[a-z-]+&#x3D;[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&amp;’,()</em>+;&#x3D;-._~:@&#x2F;?%\s]<em>?)\s</em>$</td>
+<td>例如：data:image&#x2F;jpeg;base64,xxxx&#x3D;&#x3D;</td>
+</tr>
+<tr>
+<td>UUID</td>
+<td>^[a-f\d]{4}(?:[a-f\d]{4}-){4}[a-f\d]{12}$</td>
+<td>例如：94f9d45a-71b0-4b3c-b69d-20c4bc9c8fdd</td>
+</tr>
+<tr>
+<td>16进制</td>
+<td>^[A-Fa-f0-9]+$</td>
+<td>例如：FFFFFF</td>
+</tr>
+<tr>
+<td>16进制颜色</td>
+<td>^#?([0-9a-fA-F]{3}</td>
+<td>[0-9a-fA-F]{6})$</td>
+</tr>
+<tr>
+<td>SQL语句</td>
+<td>^(?:select</td>
+<td>drop</td>
+</tr>
+<tr>
+<td>Java包名</td>
+<td>^(?:[a-zA-Z_]\w*)+(?:[.][a-zA-Z_]\w*)+$</td>
+<td>例如：com.r2coding.controller</td>
+</tr>
+<tr>
+<td>文件扩展名</td>
+<td>.(?:doc</td>
+<td>pdf</td>
+</tr>
+<tr>
+<td>HTML标签</td>
+<td>&lt;(\w+)[^&gt;]<em>&gt;(.</em>?&lt;/\1&gt;)?</td>
+<td>例如：<div class="navigator"></div></td>
+</tr>
+<tr>
+<td>HTML注释</td>
+<td><!--(.*?)--></td>
+<td>例如：<!--注释--></td>
+</tr>
+</tbody></table>
 
               
             </div>
@@ -333,7 +996,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Git/">#Git</a>
+        <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">#正则表达式</a>
       
     </div>
   
@@ -345,8 +1008,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Git 命令</div>
-      <div>https://pudding.nousbuild.com/git/</div>
+      <div>正则表达式</div>
+      <div>https://pudding.nousbuild.com/regular-expression/</div>
     </div>
     <div class="license-meta">
       
@@ -358,7 +1021,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年7月26日</div>
+          <div>2022年7月27日</div>
         </div>
       
       
@@ -405,18 +1068,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/regular-expression/" title="正则表达式">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">正则表达式</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/computer-network-9/" title="计算机网络 第九章：无线网络和移动网络">
-                        <span class="hidden-mobile">计算机网络 第九章：无线网络和移动网络</span>
+                      <a href="/git/" title="Git 命令">
+                        <span class="hidden-mobile">Git 命令</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -437,7 +1094,7 @@
         var options = Object.assign(
           {"clientID":"3d7d322afed4a293d6ac","clientSecret":"13a2463fec33044c22ddc5678f8a29086b20eb19","repo":"pudding0503.github.io","owner":"pudding0503","admin":["pudding0503"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '9bec7083027963d9f9ceae2cc7474de5'
+            id: '49fb2c270a633d020961f91d402a8db6'
           }
         )
         var gitalk = new Gitalk(options);

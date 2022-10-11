@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pudding.nousbuild.com/img/post/computer-network/3-index.jpg">
 <meta property="article:published_time" content="2022-05-07T12:36:00.000Z">
-<meta property="article:modified_time" content="2022-07-27T06:12:57.349Z">
+<meta property="article:modified_time" content="2022-10-11T01:42:49.162Z">
 <meta property="article:author" content="Haoning Wu">
 <meta property="article:tag" content="课本">
 <meta name="twitter:card" content="summary_large_image">
@@ -225,7 +225,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          4.9k 字
+          5.1k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
           <!-- compatible with older versions-->
-          41 分钟
+          43 分钟
         
       </span>
     
@@ -336,6 +336,10 @@
 </tr>
 </tbody></table>
 <p>当信息字段中出现和标志字段一样的比特 (0x7E) 组合时，就必须采取一些措施：</p>
+<p>见到 5 个 1，即 <code>11111</code>，要在后面添加一个 0。</p>
+<p>见到 <code>0x7E</code>，要用转义字符 <code>0x7D</code>。<code>0x7E</code> 改为 <code>0x7D 0x5E</code>。</p>
+<p>见到 <code>0x7D</code>，与转义字符相同。<code>0x7D</code> 改为 <code>0x7D 0x5D</code>。</p>
+<p>见到 ASCII 码的控制字符（即数值小于 0x20 的字符），则在该字符前加入一个 0x7D 字节，同时该字符的编码也要改变。例如出现 <code>0x03</code>，要改为 <code>0x7D 0x23</code>。</p>
 <h3 id="2-2-1-字节填充"><a href="#2-2-1-字节填充" class="headerlink" title="2.2.1 字节填充"></a>2.2.<strong>1 字节填充</strong></h3><p>当 PPP 使用异步传输时，把每一个 0x7DE 转变成 2 字节序列 0x7D, 0x5D。</p>
 <p>若信息字段中出现 ASCII 码的控制字符（即数值小于0x20的字符），则在该字符前加 0x7D。</p>
 <h3 id="2-2-2-零比特填充"><a href="#2-2-2-零比特填充" class="headerlink" title="2.2.2 零比特填充"></a>2.2.<strong>2 零比特填充</strong></h3><p>当 PPP 使用同步传输（在 SONET&#x2F;SDH 链路）时，只要发现有 5 个连续 1，则立即填入一个 0。</p>
@@ -528,7 +532,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年7月27日</div>
+          <div>2022年10月11日</div>
         </div>
       
       <div class="license-meta-item">

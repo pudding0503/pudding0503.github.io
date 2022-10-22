@@ -4,16 +4,7 @@
   <url>
     <loc>https://pudding.nousbuild.com/computer-network-1/</loc>
     
-    <lastmod>2022-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pudding.nousbuild.com/computer-network-2/</loc>
-    
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,16 +13,16 @@
   <url>
     <loc>https://pudding.nousbuild.com/computer-network-3/</loc>
     
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://pudding.nousbuild.com/computer-network-4/</loc>
+    <loc>https://pudding.nousbuild.com/computer-network-2/</loc>
     
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,16 +31,16 @@
   <url>
     <loc>https://pudding.nousbuild.com/computer-network-5/</loc>
     
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://pudding.nousbuild.com/computer-network-6/</loc>
+    <loc>https://pudding.nousbuild.com/computer-network-4/</loc>
     
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +49,16 @@
   <url>
     <loc>https://pudding.nousbuild.com/computer-network-7/</loc>
     
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pudding.nousbuild.com/computer-network-6/</loc>
+    
+    <lastmod>2022-10-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,16 +67,7 @@
   <url>
     <loc>https://pudding.nousbuild.com/computer-network-8/</loc>
     
-    <lastmod>2022-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://pudding.nousbuild.com/computer-network-9/</loc>
-    
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,7 +76,16 @@
   <url>
     <loc>https://pudding.nousbuild.com/git/</loc>
     
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pudding.nousbuild.com/computer-network-9/</loc>
+    
+    <lastmod>2022-10-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,7 +94,7 @@
   <url>
     <loc>https://pudding.nousbuild.com/regular-expression/</loc>
     
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -103,7 +103,7 @@
   <url>
     <loc>https://pudding.nousbuild.com/about/</loc>
     
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -112,7 +112,7 @@
 
   <url>
     <loc>https://pudding.nousbuild.com/</loc>
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -120,21 +120,21 @@
   
   <url>
     <loc>https://pudding.nousbuild.com/tags/%E8%AF%BE%E6%9C%AC/</loc>
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://pudding.nousbuild.com/tags/Git/</loc>
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://pudding.nousbuild.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -143,14 +143,14 @@
   
   <url>
     <loc>https://pudding.nousbuild.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://pudding.nousbuild.com/categories/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2022-10-11</lastmod>
+    <lastmod>2022-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

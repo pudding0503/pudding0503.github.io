@@ -46,7 +46,7 @@
   display: inline-block;
   width: 1em;
   height: 1em;
-  vertical-align: baseline;
+  vertical-align: sub;
 }
 .gt-container .gt-svg svg {
   width: 100%;

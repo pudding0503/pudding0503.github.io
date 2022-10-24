@@ -28,6 +28,9 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
   <title>布丁笔记簿</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
@@ -59,10 +62,18 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"pudding.nousbuild.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"pudding.nousbuild.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.1.0"></head>
@@ -240,9 +251,9 @@
         </a>
       </h1>
 
-      <a class="index-excerpt" href="/regular-expression/" target="_self">
+      
+      <a class="index-excerpt " href="/regular-expression/" target="_self">
         <div>
-          
           正则表达式记忆手册以及常用的正则表达式。
         </div>
       </a>
@@ -307,9 +318,9 @@
         </a>
       </h1>
 
-      <a class="index-excerpt" href="/git/" target="_self">
+      
+      <a class="index-excerpt " href="/git/" target="_self">
         <div>
-          
           Git 常用命令总结和常见问题解决。
         </div>
       </a>
@@ -374,9 +385,9 @@
         </a>
       </h1>
 
-      <a class="index-excerpt" href="/computer-network-9/" target="_self">
+      
+      <a class="index-excerpt " href="/computer-network-9/" target="_self">
         <div>
-          
           无线网络和移动网络的数据链路层与传统的有线互联网的数据链路层相差很大，需要区分学习。
         </div>
       </a>
@@ -441,10 +452,10 @@
         </a>
       </h1>
 
-      <a class="index-excerpt" href="/computer-network-8/" target="_self">
+      
+      <a class="index-excerpt " href="/computer-network-8/" target="_self">
         <div>
-          
-          介绍流式音频&#x2F;视频中的媒体服务器和实时流式协议，改进“尽最大努力交付”的服务的一些措施。
+          介绍流式音频/视频中的媒体服务器和实时流式协议，改进“尽最大努力交付”的服务的一些措施。
         </div>
       </a>
 
@@ -508,9 +519,9 @@
         </a>
       </h1>
 
-      <a class="index-excerpt" href="/computer-network-7/" target="_self">
+      
+      <a class="index-excerpt " href="/computer-network-7/" target="_self">
         <div>
-          
           随看计算机网络的发展，网络中的安全问题也日趋严重，大量在网络中存储和传输的数据就需要保护。
         </div>
       </a>
@@ -575,9 +586,9 @@
         </a>
       </h1>
 
-      <a class="index-excerpt" href="/computer-network-6/" target="_self">
+      
+      <a class="index-excerpt " href="/computer-network-6/" target="_self">
         <div>
-          
           体系结构中的最高层，通过应用进程间的交互来完成特定网络应用。
         </div>
       </a>
@@ -642,9 +653,9 @@
         </a>
       </h1>
 
-      <a class="index-excerpt" href="/computer-network-5/" target="_self">
+      
+      <a class="index-excerpt " href="/computer-network-5/" target="_self">
         <div>
-          
           运输层为网络层和应用层服务，学习并掌握尽最大努力交付的 UDP 协议和可靠传输的 TCP 协议，以及它们的重点内容。
         </div>
       </a>
@@ -709,9 +720,9 @@
         </a>
       </h1>
 
-      <a class="index-excerpt" href="/computer-network-4/" target="_self">
+      
+      <a class="index-excerpt " href="/computer-network-4/" target="_self">
         <div>
-          
           计算机网络层是“五层结构”的核心层，学习并深入掌握 IPv4 和 IPv6 协议的组成、要点和主要内容。
         </div>
       </a>
@@ -776,9 +787,9 @@
         </a>
       </h1>
 
-      <a class="index-excerpt" href="/computer-network-3/" target="_self">
+      
+      <a class="index-excerpt " href="/computer-network-3/" target="_self">
         <div>
-          
           数据链路层属于计算机网络的低层，学习点对点通信、广播通信的概念和内容，以及所使用各类的协议要点。
         </div>
       </a>
@@ -843,9 +854,9 @@
         </a>
       </h1>
 
-      <a class="index-excerpt" href="/computer-network-2/" target="_self">
+      
+      <a class="index-excerpt " href="/computer-network-2/" target="_self">
         <div>
-          
           讨论物理层的基本概念，介绍有关数据通信的重要概念，以及各种传输媒体的主要特点。
         </div>
       </a>
@@ -1044,8 +1055,6 @@
       
     })(window, document);
   </script>
-
-
 
 
 

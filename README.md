@@ -52,4 +52,4 @@
 
 #### 3.3 提交申请
 
-访问 [友情链接](https://github.com/pudding0503/friends/issues) 页面，直接留言即可，按照 Markdown 格式填写必要内容。
+直接在 [友情链接页面](https://pudding.nousbuild.com/links/) 或 [Issue #4](https://github.com/pudding0503/pudding0503.github.io/issues/4) 中留言即可，按照 Markdown 格式填入你的站点信息。
